@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="aurora">
+<head>
+<meta charset="UTF-8">
+<title>Our Work & Case Studies — PipoZa Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore live case studies and websites engineered by PipoZa Dev, including the Revive Clinic healthcare platform.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">
+      <div class="brand-logo-wrap"><img src="PipoZa_Logo.png" alt="PipoZa Dev Logo"></div>
+      <span>PipoZa Dev<small>Bespoke Web Studio</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="index.html">Home</a>
+      <a href="services.html" data-nav="services.html">What We Build</a>
+      <a href="work.html" data-nav="work.html">Our Work</a>
+      <a href="about.html" data-nav="about.html">About Studio</a>
+      <a href="contact.html" data-nav="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="start.html" class="btn btn-primary btn-sm">Start Your Project →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="m-link" data-nav="index.html">Home <span>→</span></a>
+    <a href="services.html" class="m-link" data-nav="services.html">What We Build <span>→</span></a>
+    <a href="work.html" class="m-link active" data-nav="work.html">Our Work <span>→</span></a>
+    <a href="about.html" class="m-link" data-nav="about.html">About Studio <span>→</span></a>
+    <a href="contact.html" class="m-link" data-nav="contact.html">Contact <span>→</span></a>
+    <div class="mn-cta">
+      <a href="start.html" class="btn btn-primary btn-wide">Start Your Project</a>
+      <a href="https://wa.me/917810888147" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link>WhatsApp Us</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="kicker">Case Studies & Live Works</span>
+      <h1>Real businesses. Real code. Real results.</h1>
+      <p>A closer look at how we take client visions and turn them into ultra-fast, conversion-focused live websites — tested across desktop and mobile.</p>
+    </div>
+  </section>
+
+  <!-- ================= PERFORMANCE SCORECARD ================= -->
+  <section class="section-pad" style="padding-top:0; padding-bottom:30px;">
+    <div class="wrap">
+      <div class="stats" style="margin-top:0;">
+        <div class="stat glass reveal tilt-card" data-count="100" data-suffix="/100">
+          <div class="num">0</div>
+          <div class="lbl">Lighthouse Performance Score</div>
+        </div>
+        <div class="stat glass reveal tilt-card" data-count="0.4" data-suffix="s">
+          <div class="num">0</div>
+          <div class="lbl">Average Page Paint Speed</div>
+        </div>
+        <div class="stat glass reveal tilt-card" data-count="3.2" data-suffix="x">
+          <div class="num">0</div>
+          <div class="lbl">Inquiry Rate Increase</div>
+        </div>
+        <div class="stat glass reveal tilt-card" data-count="99.9" data-suffix="%">
+          <div class="num">0</div>
+          <div class="lbl">Global Cloud Uptime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE SHOWCASE SIMULATOR ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Live Interactive Device Simulator</span>
+        <h2>Explore our builds in action.</h2>
+        <p>Toggle between projects and switch between Desktop & Mobile viewports to experience our responsive engineering firsthand.</p>
+      </div>
+      <div id="worksShowcase"></div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= DEEP DIVE CASE STUDY: REVIVE CLINIC ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="case-study-card glass reveal tilt-card">
+        <div class="work-preview" style="padding:40px; background:linear-gradient(155deg,#0a1c18,#0a0f1c 60%); display:flex; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+          <div class="browser-mock" style="width:100%; max-width:380px; background:#0d1a17; border:1px solid rgba(23,227,166,0.35); border-radius:16px; overflow:hidden; box-shadow:0 25px 60px rgba(0,0,0,0.7);">
+            <div class="browser-bar" style="display:flex; align-items:center; gap:6px; padding:12px 16px; background:#0a1512; border-bottom:1px solid rgba(255,255,255,0.08);">
+              <span style="width:9px; height:9px; border-radius:50%; background:#ff5f56;"></span>
+              <span style="width:9px; height:9px; border-radius:50%; background:#ffbd2e;"></span>
+              <span style="width:9px; height:9px; border-radius:50%; background:#27c93f;"></span>
+              <div class="url" style="margin-left:8px; font-size:11px; color:#5c8f80; font-family:monospace;">reviveclinic.s.gy/home</div>
+            </div>
+            <div class="browser-body" style="padding:24px 20px;">
+              <div class="bm-badge" style="display:inline-block; font-size:11px; color:var(--go); background:rgba(23,227,166,0.12); border:1px solid rgba(23,227,166,0.3); padding:4px 12px; border-radius:99px; margin-bottom:14px;">Non-medicinal therapy · Noida</div>
+              <div class="bm-title" style="font-family:'Space Grotesk'; font-weight:800; font-size:20px; color:#eaf7f2; margin-bottom:6px;">Revive by Radheyshyam Arogya Dham</div>
+              <div class="bm-sub" style="font-size:13px; color:#7fa598; margin-bottom:18px;">Acupressure & naturopathic pain therapy</div>
+              <div class="bm-lines" style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+                <i style="display:block; height:8px; border-radius:4px; background:rgba(255,255,255,0.1); width:85%;"></i>
+                <i style="display:block; height:8px; border-radius:4px; background:rgba(255,255,255,0.1); width:65%;"></i>
+                <i style="display:block; height:8px; border-radius:4px; background:rgba(255,255,255,0.1); width:75%;"></i>
+              </div>
+              <a href="https://reviveclinic.s.gy/home" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="font-size:12px; padding:8px 16px;">Visit Live Site ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-info" style="padding:46px 40px; display:flex; flex-direction:column; justify-content:center;">
+          <div class="tag" style="font-size:12.5px; color:var(--go); font-weight:700; text-transform:uppercase; margin-bottom:10px;">Featured Healthcare Case Study</div>
+          <h3 style="font-size:28px; margin-bottom:14px;">Revive Pain Care Clinic</h3>
+          <p style="color:var(--text-dim); font-size:15px; line-height:1.7; margin-bottom:22px;">
+            A premier pain-management and holistic naturopathy clinic in Sector 62, Noida needed a web platform that conveyed deep medical authority, explained their non-surgical acupressure methods clearly, and maximized consultation bookings.
+          </p>
+          <div class="feats" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px;">
+            <span style="font-size:12px; color:var(--text); background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:6px 14px; border-radius:99px;">Appointment-First Flow</span>
+            <span style="font-size:12px; color:var(--text); background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:6px 14px; border-radius:99px;">Doctor Profile & Credentials</span>
+            <span style="font-size:12px; color:var(--text); background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:6px 14px; border-radius:99px;">1-Tap WhatsApp Lead Bridge</span>
+            <span style="font-size:12px; color:var(--text); background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:6px 14px; border-radius:99px;">Free PipoZa Cloud Hosting</span>
+          </div>
+          <div>
+            <a href="https://reviveclinic.s.gy/home" target="_blank" rel="noopener" class="btn btn-grad">Launch Live Clinic Website ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline Card -->
+      <div class="policy-card glass reveal tilt-card" style="margin-top:30px; text-align:center; padding:36px 24px;">
+        <h3 style="font-size:20px; margin-bottom:8px;">More Client Projects Currently in Sprint</h3>
+        <p style="color:var(--text-dim); max-width:620px; margin:0 auto 20px; font-size:14.5px;">
+          We are currently deploying SaaS dashboards, Web3 platforms, and D2C storefronts. Want your project engineered and featured next?
+        </p>
+        <a href="start.html" class="btn btn-primary btn-sm">Lock in Your 4–5 Day Sprint Slot →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="wrap">
+      <div class="wizard-wrap glass reveal" style="text-align:center; padding:65px 40px;">
+        <h2 style="font-size:clamp(26px,3.6vw,38px); margin-bottom:14px;">Love what you see? Let's engineer yours.</h2>
+        <p style="color:var(--text-dim); max-width:480px; margin:0 auto 28px; font-size:15.5px;">Your site can be designed, built, and live on the internet this time next week.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="start.html" class="btn btn-primary">Start Your Project →</a>
+          <a href="services.html" class="btn btn-ghost">Explore All Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="PipoZa_Logo.png" alt="PipoZa Dev"> PipoZa Dev</div>
+        <p class="desc">A boutique digital studio engineering custom web experiences for tech, medical, gaming, retail, and business brands. Free hosting included for life.</p>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <div class="flinks">
+          <a href="services.html">What We Build</a>
+          <a href="work.html">Our Work & Case Studies</a>
+          <a href="about.html">About Studio</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="flinks">
+          <a href="start.html">Start a Project</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link>Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/917810888147" target="_blank" rel="noopener" data-wa-link>WhatsApp: +91 78108 88147</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> Designed & Engineered by PipoZa Dev</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
