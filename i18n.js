@@ -49,6 +49,7 @@ PIPOZA.TRANSLATIONS = {
     'hero.h1_gradient': 'dominate & convert',
     'hero.lead': 'PipoZa Dev designs and engineers custom web experiences from scratch — no rigid templates stretched to fit. Every build is tailored to your business, with free hosting included for life.',
     'hero.cta_start': 'Start Your Project →',
+    'hero.cta_contact': 'Direct Contact ↗',
     'hero.cta_work': 'Explore Live Work',
 
     // Rotating hero words
@@ -447,6 +448,7 @@ PIPOZA.TRANSLATIONS = {
     'hero.h1_gradient': 'बिजनेस और कन्वर्ज़न',
     'hero.lead': 'पिपोज़ा देव (PipoZa Dev) आपकी वेबसाइट को स्क्रैच से कस्टम कोड करता है — कोई बना-बनाया धीमा टेम्पलेट नहीं। हर वेबसाइट आपके व्यवसाय के अनुरूप होती है, जिसमें लाइफटाइम फ्री होस्टिंग शामिल है।',
     'hero.cta_start': 'प्रोजेक्ट शुरू करें →',
+    'hero.cta_contact': 'सीधे संपर्क करें ↗',
     'hero.cta_work': 'लाइव काम देखें',
 
     // Rotating hero words
@@ -845,6 +847,7 @@ PIPOZA.TRANSLATIONS = {
     'hero.h1_gradient': 'গ্রোথ ও কনভার্সন',
     'hero.lead': 'পিপোজা ডেভ (PipoZa Dev) আপনার ব্যবসার জন্য শুরু থেকে কাস্টম কোড করে ওয়েবসাইট তৈরি করে — কোনো রেডিমেড টেমপ্লেট নয়। সাথে আজীবন ফ্রি ক্লাউড হোস্টিং অন্তর্ভুক্ত।',
     'hero.cta_start': 'প্রজেক্ট শুরু করুন →',
+    'hero.cta_contact': 'সরাসরি যোগাযোগ ↗',
     'hero.cta_work': 'আমাদের কাজ দেখুন',
 
     // Rotating hero words
