@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="aurora">
+<head>
+<meta charset="UTF-8">
+<title>What We Build — PipoZa Dev Services & Deliverables</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore bespoke website services by PipoZa Dev: Tech SaaS, Medical Clinics, Gaming, E-commerce, Corporate and Portfolios. Handcrafted and launched in 4–5 working days.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index" class="brand">
+      <div class="brand-logo-wrap"><img src="PipoZa_Logo.png" alt="PipoZa Dev Logo"></div>
+      <span>PipoZa Dev<small data-i18n="nav.brand_sub">Bespoke Web Studio</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index" data-nav="index" data-i18n="nav.home">Home</a>
+      <a href="services" data-nav="services" data-i18n="nav.build">What We Build</a>
+      <a href="work" data-nav="work" data-i18n="nav.work">Our Work</a>
+      <a href="about" data-nav="about" data-i18n="nav.about">About Studio</a>
+      <a href="contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switcher"></div>
+      <a href="start" class="btn btn-primary btn-sm" data-i18n="nav.start">Start Your Project →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="lang-switcher mobile-lang-wrap"></div>
+  <a href="index" class="m-link" data-nav="index"><span data-i18n="nav.home">Home</span> <span>→</span></a>
+  <a href="services" class="m-link active" data-nav="services"><span data-i18n="nav.build">What We Build</span> <span>→</span></a>
+  <a href="work" class="m-link" data-nav="work"><span data-i18n="nav.work">Our Work</span> <span>→</span></a>
+  <a href="about" class="m-link" data-nav="about"><span data-i18n="nav.about">About Studio</span> <span>→</span></a>
+  <a href="contact" class="m-link" data-nav="contact"><span data-i18n="nav.contact">Contact</span> <span>→</span></a>
+  <div class="mn-cta">
+    <a href="start" class="btn btn-primary btn-wide" data-i18n="cta.start_now">Start Your Project Now →</a>
+    <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link data-i18n="cta.or_chat">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="kicker" data-i18n="srv.kicker">Services & Architecture</span>
+      <h1 data-i18n="srv.title">Whatever your business does, we engineer a site that makes it stand out.</h1>
+      <p data-i18n="srv.desc">Every website starts from your business's true requirements — then gets custom-coded for speed, conversion, and effortless user flow. Free lifetime hosting included on every build.</p>
+    </div>
+  </section>
+
+  <!-- ================= CATEGORY SHOWCASE ================= -->
+  <section class="section-pad" style="padding-top:10px;">
+    <div class="wrap">
+      <div class="cat-grid" id="servicesCatGrid"></div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= DELIVERABLES MATRIX ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="deliv.kicker">Standard On Every Project</span>
+        <h2 data-i18n="deliv.title">What's included in every PipoZa build.</h2>
+        <p data-i18n="deliv.sub">No basic feature behind a paywall. Here is the standard architecture we ship with every website.</p>
+      </div>
+
+      <div class="cat-grid">
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c1)" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          </div>
+          <h3 data-i18n="deliv.f1_title">100% Mobile-First Responsive</h3>
+          <p data-i18n="deliv.f1_desc">Pixel-perfect responsiveness across iPhones, Androids, iPads, laptops, and ultra-wide desktop monitors.</p>
+          <span class="tag" data-i18n="deliv.f1_tag">Zero Visual Glitches</span>
+        </div>
+
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c2)" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 data-i18n="deliv.f2_title">Sub-Second Load Speeds</h3>
+          <p data-i18n="deliv.f2_desc">Hand-tuned CSS and lightweight JavaScript ensuring 95+ Google Lighthouse scores and zero bloat.</p>
+          <span class="tag" data-i18n="deliv.f2_tag">99/100 Core Web Vitals</span>
+        </div>
+
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--go)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 data-i18n="deliv.f3_title">Free Lifetime Cloud Hosting</h3>
+          <p data-i18n="deliv.f3_desc">Hosted on fast, secure global cloud infrastructure with 99.9% uptime and zero annual hosting bills.</p>
+          <span class="tag" data-i18n="deliv.f3_tag">0₹ Recurring Fee</span>
+        </div>
+
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c3)" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          </div>
+          <h3 data-i18n="deliv.f4_title">Direct WhatsApp Lead Bridge</h3>
+          <p data-i18n="deliv.f4_desc">1-tap customer inquiry buttons that send formatted booking and product requests directly into your WhatsApp.</p>
+          <span class="tag" data-i18n="deliv.f4_tag">High Conversion</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= COMPARISON TABLE ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="srv.comp_kicker">Why Choose Us</span>
+        <h2 data-i18n="srv.comp_title">How PipoZa Dev compares.</h2>
+        <p data-i18n="srv.comp_sub">See why businesses choose our dedicated 4–5 day sprints over bloated agencies and restrictive drag-and-drop builders.</p>
+      </div>
+
+      <div class="comp-table-wrap glass reveal">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="srv.th_scope">Feature & Scope</th>
+              <th class="pipoza-col" data-i18n="srv.th_pipoza">✨ PipoZa Dev</th>
+              <th data-i18n="srv.th_agencies">Traditional Web Agencies</th>
+              <th data-i18n="srv.th_templates">DIY Builders (Wix / Shopify)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="srv.f_turnaround"><b>Turnaround Time</b></td>
+              <td class="pipoza-col" data-i18n="srv.v_pipoza_speed">⚡ 4–5 Working Days</td>
+              <td data-i18n="srv.v_agency_speed">4 to 8 Weeks</td>
+              <td data-i18n="srv.v_temp_speed">Weeks of DIY frustration</td>
+            </tr>
+            <tr>
+              <td data-i18n="srv.f_hosting"><b>Cloud Hosting</b></td>
+              <td class="pipoza-col" data-i18n="srv.v_pipoza_hosting">✓ Free For Life (0₹)</td>
+              <td data-i18n="srv.v_agency_hosting">Expensive recurring fees</td>
+              <td data-i18n="srv.v_temp_hosting">Monthly subscription lock-in</td>
+            </tr>
+            <tr>
+              <td data-i18n="srv.f_code"><b>Code Quality & Speed</b></td>
+              <td class="pipoza-col" data-i18n="srv.v_pipoza_code">✓ Handcrafted, lightweight code</td>
+              <td data-i18n="srv.v_agency_code">Varies, often heavy plugins</td>
+              <td data-i18n="srv.v_temp_code">Bloated script libraries</td>
+            </tr>
+            <tr>
+              <td data-i18n="srv.f_domain"><b>Custom Domain Setup</b></td>
+              <td class="pipoza-col" data-i18n="srv.v_pipoza_domain">✓ Configured at wholesale cost</td>
+              <td data-i18n="srv.v_agency_domain">Heavily marked up</td>
+              <td data-i18n="srv.v_temp_domain">Upsold on premium plans</td>
+            </tr>
+            <tr>
+              <td data-i18n="srv.f_access"><b>Direct Developer Access</b></td>
+              <td class="pipoza-col" data-i18n="srv.v_pipoza_access">✓ 1-on-1 via WhatsApp / Call</td>
+              <td data-i18n="srv.v_agency_access">Filtered through account managers</td>
+              <td data-i18n="srv.v_temp_access">Automated chatbots & forums</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="srv.faq_kicker">Got Questions?</span>
+        <h2 data-i18n="srv.faq_title">Frequently asked questions.</h2>
+        <p data-i18n="srv.faq_sub">Clear, direct answers about our sprint timelines, domains, and revision policies.</p>
+      </div>
+
+      <div class="faq-search-wrap reveal">
+        <svg class="faq-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="faqSearch" class="faq-search-input" data-i18n-placeholder="srv.faq_search_ph" placeholder="🔍 Search questions (e.g. hosting, domain, pricing, timeline)...">
+      </div>
+
+      <div class="faq reveal" id="faq">
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="srv.faq_q1">Do I need to have all my content ready before we start?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="faq-a"><p data-i18n="srv.faq_a1">Not at all. If you have text and images, great! If not, we help structure and write crisp, high-converting copy and select modern visuals tailored to your industry.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="srv.faq_q2">Is hosting really 100% free for life?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="faq-a"><p data-i18n="srv.faq_a2">Yes — every website we build is deployed to high-performance cloud infrastructure hosted by us with free SSL and 99.9% uptime. You never receive recurring monthly hosting bills from us.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="srv.faq_q3">Can I connect my own custom domain (e.g., mybusiness.com)?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="faq-a"><p data-i18n="srv.faq_a3">Absolutely. You can either provide an existing domain you already own, or we will register and configure one for you. You pay only the domain registrar's wholesale cost with zero markups.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="srv.faq_q4">How does the 4–5 working day delivery guarantee work?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="faq-a"><p data-i18n="srv.faq_a4">Once we lock the project brief and initial direction together, our sprint begins immediately. Within 4–5 working days, your website is designed, coded, tested, and live on the internet.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="srv.faq_q5">What if I want design changes or updates after launch?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+          <div class="faq-a"><p data-i18n="srv.faq_a5">We don't abandon you after launch. Minor copy updates, color tweaks, and adjustments are handled promptly over a quick WhatsApp chat or phone call.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="wrap">
+      <div class="wizard-wrap glass reveal" style="text-align:center; padding:65px 40px;">
+        <h2 style="font-size:clamp(26px,3.6vw,38px); margin-bottom:14px;" data-i18n="srv.cta_title">Ready to start your 4–5 day sprint?</h2>
+        <p style="color:var(--text-dim); max-width:480px; margin:0 auto 28px; font-size:15.5px;" data-i18n="srv.cta_sub">Get in touch directly or launch our interactive project builder to lock in your project slot.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="start" class="btn btn-primary" data-i18n="hero.cta_start">Start Your Project →</a>
+          <a href="work" class="btn btn-ghost" data-i18n="hero.cta_work">Explore Live Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="PipoZa_Logo.png" alt="PipoZa Dev"> PipoZa Dev</div>
+        <p class="desc" data-i18n="foot.desc">A boutique digital studio engineering custom web experiences for tech, medical, gaming, retail, and business brands. Free hosting included for life. Zero advance payment required.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore_title">Studio</h4>
+        <div class="flinks">
+          <a href="services" data-i18n="foot.services">What We Build</a>
+          <a href="work" data-i18n="foot.work">Our Work & Case Studies</a>
+          <a href="about" data-i18n="foot.about">About Studio</a>
+          <a href="contact" data-i18n="foot.contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect_title">Connect</h4>
+        <div class="flinks">
+          <a href="start" data-i18n="foot.start">Start a Project</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> <span data-i18n="foot.made">Designed & Engineered by PipoZa Dev</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+<script>
+  function renderServicesGrid() {
+    const sGrid = document.getElementById('servicesCatGrid');
+    if (sGrid && PIPOZA.CATEGORIES) {
+      sGrid.innerHTML = PIPOZA.CATEGORIES.map(c => `
+        <div class="cat-card glass reveal tilt-card" onclick="location.href='start#step-1'">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none">${PIPOZA.ICONS[c.id] || PIPOZA.ICONS.other}</svg></div>
+          <h3 data-i18n="${c.labelKey}">${c.label}</h3>
+          <p data-i18n="${c.descKey}">${c.desc}</p>
+          <div class="card-footer">
+            <span class="tag" data-i18n="sec.sprint_badge">${PIPOZA.t('sec.sprint_badge')}</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>`).join('') + `
+        <div class="cat-card glass reveal tilt-card" onclick="location.href='start#step-1'">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none">${PIPOZA.ICONS.other}</svg></div>
+          <h3 data-i18n="cat.other.label">${PIPOZA.t('cat.other.label')}</h3>
+          <p data-i18n="cat.other.desc">${PIPOZA.t('cat.other.desc')}</p>
+          <div class="card-footer">
+            <span class="tag" data-i18n="cat.other_badge">${PIPOZA.t('cat.other_badge')}</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderServicesGrid();
+    if (PIPOZA.initReveal) PIPOZA.initReveal();
+    window.addEventListener('pipoza:langchange', () => {
+      renderServicesGrid();
+    });
+  });
+</script>
+</body>
+</html>

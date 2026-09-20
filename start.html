@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="aurora">
+<head>
+<meta charset="UTF-8">
+<title>Start Your Project — 4–5 Day Sprint Builder | PipoZa Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Configure and launch your website project with PipoZa Dev. 1-minute interactive builder, free cloud hosting included, live in 4-5 working days.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<canvas id="confettiCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index" class="brand">
+      <div class="brand-logo-wrap"><img src="PipoZa_Logo.png" alt="PipoZa Dev Logo"></div>
+      <span>PipoZa Dev<small data-i18n="nav.brand_sub">Bespoke Web Studio</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index" data-nav="index" data-i18n="nav.home">Home</a>
+      <a href="services" data-nav="services" data-i18n="nav.build">What We Build</a>
+      <a href="work" data-nav="work" data-i18n="nav.work">Our Work</a>
+      <a href="about" data-nav="about" data-i18n="nav.about">About Studio</a>
+      <a href="contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switcher"></div>
+      <a href="start" class="btn btn-primary btn-sm" data-i18n="nav.start">Start Your Project →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="lang-switcher mobile-lang-wrap"></div>
+  <a href="index" class="m-link" data-nav="index"><span data-i18n="nav.home">Home</span> <span>→</span></a>
+  <a href="services" class="m-link" data-nav="services"><span data-i18n="nav.build">What We Build</span> <span>→</span></a>
+  <a href="work" class="m-link" data-nav="work"><span data-i18n="nav.work">Our Work</span> <span>→</span></a>
+  <a href="about" class="m-link" data-nav="about"><span data-i18n="nav.about">About Studio</span> <span>→</span></a>
+  <a href="contact" class="m-link" data-nav="contact"><span data-i18n="nav.contact">Contact</span> <span>→</span></a>
+  <div class="mn-cta">
+    <a href="start" class="btn btn-primary btn-wide" data-i18n="cta.start_now">Start Your Project Now →</a>
+    <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link data-i18n="cta.or_chat">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero" style="padding-bottom:20px;">
+    <div class="wrap">
+      <div class="eyebrow-badge">
+        <span class="dot"></span>
+        <span data-i18n="wiz.badge">Interactive Project Builder · 1 Minute Flow</span>
+      </div>
+      <h1 style="margin-top:10px;" data-i18n="wiz.title">Let's engineer your new website.</h1>
+      <p data-i18n="wiz.sub">No tedious forms — select what you know, click a quick-start preset if you prefer, and launch your brief straight to our engineering team in one click.</p>
+    </div>
+  </section>
+
+  <section class="section-pad" style="padding-top:0;">
+    <div class="wrap">
+      <div class="wizard-wrap glass">
+
+        <!-- Quick Presets -->
+        <div class="presets-bar" id="presetsBar"></div>
+
+        <!-- Visual Step Progress Bar -->
+        <div class="progress">
+          <i class="active" data-i="1"><b></b></i>
+          <i data-i="2"><b></b></i>
+          <i data-i="3"><b></b></i>
+          <i data-i="4"><b></b></i>
+          <i data-i="5"><b></b></i>
+        </div>
+        <div class="step-meta">
+          <span class="cur"><span data-i18n="wiz.step_meta_step">Step</span> <b id="stepNum">1</b> <span data-i18n="wiz.step_meta_of">of</span> 5</span>
+          <span class="cur font-heading" id="stepLabel" style="font-weight:700; color:var(--go);">Project Category</span>
+        </div>
+
+        <!-- STEP 1 — CATEGORY -->
+        <div class="step-panel active" data-step="1">
+          <div class="step-title" data-i18n="wiz.step1_title">What kind of website are you building?</div>
+          <div class="step-sub" data-i18n="wiz.step1_sub">Choose the closest fit below — we will tailor the architecture and layout around it.</div>
+          <div class="type-grid" id="typeGrid"></div>
+          <div class="field" id="otherTypeField" style="display:none; margin-top:20px;">
+            <label><span data-i18n="wiz.other_field_lbl">Describe your custom project category</span> <span class="opt">(optional)</span></label>
+            <input type="text" id="otherType" data-i18n-placeholder="wiz.other_field_ph" placeholder="e.g. Real estate listings, event booking portal, web3 dApp...">
+          </div>
+        </div>
+
+        <!-- STEP 2 — BUSINESS & VISION -->
+        <div class="step-panel" data-step="2">
+          <div class="step-title" data-i18n="wiz.step2_title">Tell us about your brand & goals</div>
+          <div class="step-sub" data-i18n="wiz.step2_sub">All details are compulsory so our engineering team can architect your project accurately.</div>
+          <div class="row2">
+            <div class="field">
+              <label data-i18n="field.biz_name">Business / Project Name *</label>
+              <input type="text" id="bizName" data-i18n-placeholder="field.biz_name_ph" placeholder="e.g. Apex Health Clinic" required>
+            </div>
+            <div class="field">
+              <label data-i18n="field.biz_loc">Location / Target Area *</label>
+              <input type="text" id="bizLocation" data-i18n-placeholder="field.biz_loc_ph" placeholder="e.g. Noida, Delhi NCR, Global" required>
+            </div>
+          </div>
+          <div class="field">
+            <label data-i18n="field.biz_desc">What should this website accomplish? *</label>
+            <textarea id="bizDesc" data-i18n-placeholder="field.biz_desc_ph" placeholder="Who is your audience, what do you offer, and what primary action should visitors take (call, WhatsApp booking, checkout, beta signup)?" required></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 3 — STYLE & PALETTES -->
+        <div class="step-panel" data-step="3">
+          <div class="step-title" data-i18n="wiz.step3_title">Style aesthetic & visual vibe</div>
+          <div class="step-sub" data-i18n="wiz.step3_sub">Select an aesthetic direction as a starting baseline.</div>
+          <div class="field">
+            <label data-i18n="wiz.design_personality">Design Personality *</label>
+            <div class="chip-grid" id="styleGrid"></div>
+          </div>
+          <div class="field" style="margin-top:28px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+              <label style="margin-bottom:0;" data-i18n="wiz.primary_color">Primary Color Direction *</label>
+              <button type="button" class="btn btn-ghost btn-sm" id="btnLaunchCustomStudioInWizard" style="font-size:12px; padding:6px 14px; border-color:var(--border-strong);" data-i18n="wiz.custom_colors">
+                🎨 Mix Your Own Colors
+              </button>
+            </div>
+            <div class="swatch-row" id="colorGrid"></div>
+          </div>
+          <div class="note-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span data-i18n="wiz.note_colors">Don't worry about being locked in — our design team will fine-tune colors, fonts, and layout nuances with you before development starts.</span>
+          </div>
+        </div>
+
+        <!-- STEP 4 — CONTACT & BUDGET -->
+        <div class="step-panel" data-step="4">
+          <div class="step-title" data-i18n="wiz.step4_title">Contact info & target budget</div>
+          <div class="step-sub" data-i18n="wiz.step4_sub">All details are compulsory. 0% advance required — pay only after delivery.</div>
+          
+          <div class="zero-advance-banner">
+            <div class="zab-icon">🛡️</div>
+            <div class="zab-content">
+              <strong data-i18n="trust.title">Zero Advance Payment Guarantee</strong>
+              <span data-i18n="trust.desc">We do not take any advance payment. You only pay after your website is completely built and delivered to your 100% satisfaction. (Pricing discussed & finalized upfront).</span>
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label data-i18n="field.your_name">Your Full Name *</label>
+              <input type="text" id="ctName" data-i18n-placeholder="field.your_name_ph" placeholder="Full name" required>
+            </div>
+            <div class="field">
+              <label data-i18n="field.email">Email Address *</label>
+              <input type="email" id="ctEmail" data-i18n-placeholder="field.email_ph" placeholder="you@domain.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label data-i18n="field.phone">WhatsApp / Phone Number *</label>
+            <input type="tel" id="ctPhone" data-i18n-placeholder="field.phone_ph" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="field">
+            <label data-i18n="wiz.target_range_label">Target Budget Range (₹1k – ₹50k)</label>
+            <div class="budget-slider-wrap" id="budgetSliderContainer">
+              <div class="budget-slider-header">
+                <div>
+                  <span style="font-size:12px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.04em; display:block; margin-bottom:4px;" data-i18n="wiz.target_investment">Target Investment</span>
+                  <div class="budget-val-badge" id="budgetValDisplay">
+                    <span id="budgetAmount">₹15,000</span>
+                    <span class="tier-tag" id="budgetTierTag">₹15k – 25k (SaaS, Clinics & Dynamic Sites)</span>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-ghost btn-sm" id="btnFlexibleQuote" style="font-size:11.5px; padding:6px 12px;" data-i18n="wiz.custom_quote">
+                  Need Custom Quote
+                </button>
+              </div>
+
+              <input type="range" class="budget-slider" id="budgetRangeSlider" min="1000" max="50000" step="1000" value="15000">
+
+              <div class="budget-ticks">
+                <span data-val="1000">₹1k</span>
+                <span data-val="5000">₹5k</span>
+                <span data-val="15000">₹15k</span>
+                <span data-val="25000">₹25k</span>
+                <span data-val="35000">₹35k</span>
+                <span data-val="50000">₹50k</span>
+              </div>
+
+              <div class="budget-quick-pills" id="budgetQuickPills">
+                <button type="button" class="budget-quick-pill" data-val="3000" data-i18n="wiz.budget_under5k">Under ₹5k</button>
+                <button type="button" class="budget-quick-pill" data-val="10000" data-i18n="wiz.budget_5k_15k">₹5k – 15k</button>
+                <button type="button" class="budget-quick-pill active" data-val="20000" data-i18n="wiz.budget_15k_25k">₹15k – 25k</button>
+                <button type="button" class="budget-quick-pill" data-val="35000" data-i18n="wiz.budget_25k_50k">₹25k – 50k</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5 — REVIEW & SEND -->
+        <div class="step-panel" data-step="5">
+          <div class="step-title" data-i18n="wiz.step5_title">Review & Instant Launch! 🎉</div>
+          <div class="step-sub" data-i18n="wiz.step5_sub">Your project brief is compiled. Send it directly to us via WhatsApp, Email, or download a copy.</div>
+          <div class="review-box glass" id="reviewBox"></div>
+          
+          <div class="send-row">
+            <button class="btn btn-primary" id="sendWhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+              <span data-i18n="wiz.btn_whatsapp">Send via WhatsApp →</span>
+            </button>
+            <button class="btn btn-grad" id="sendEmail">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span data-i18n="wiz.btn_email">Send via Email →</span>
+            </button>
+            <button class="btn btn-ghost" id="downloadFile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span data-i18n="wiz.btn_download">Download .txt Brief</span>
+            </button>
+            <button class="btn btn-ghost" id="copySummary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span data-i18n="wiz.btn_copy">Copy Brief</span>
+            </button>
+          </div>
+
+          <div class="note-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span data-i18n="wiz.note_hosting"><b>Free Lifetime Hosting</b> is included automatically with every PipoZa build. Once you hit send, our lead developer will connect with you to confirm your sprint kickoff!</span>
+          </div>
+
+          <p class="direct-contact-note">
+            <span data-i18n="wiz.prefer_chat">Prefer direct chat?</span> <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="wiz.chat_wa_link">Message us directly on WhatsApp</a> or <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="wiz.email_us_link">Email us directly</a>.
+          </p>
+        </div>
+
+        <!-- Bottom Wizard Navigation Controls -->
+        <div class="wiz-nav">
+          <button class="btn btn-ghost" id="prevBtn" style="visibility:hidden;" data-i18n="wiz.btn_back">← Back</button>
+          <button class="btn btn-grad" id="nextBtn" data-i18n="wiz.btn_next">Continue to Next Step →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="PipoZa_Logo.png" alt="PipoZa Dev"> PipoZa Dev</div>
+        <p class="desc" data-i18n="foot.desc">A boutique digital studio engineering custom web experiences for tech, medical, gaming, retail, and business brands. Free hosting included for life.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore_title">Studio</h4>
+        <div class="flinks">
+          <a href="services" data-i18n="foot.services">What We Build</a>
+          <a href="work" data-i18n="foot.work">Our Work & Case Studies</a>
+          <a href="about" data-i18n="foot.about">About Studio</a>
+          <a href="contact" data-i18n="foot.contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect_title">Connect</h4>
+        <div class="flinks">
+          <a href="start" data-i18n="foot.start">Start a Project</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> <span data-i18n="foot.made">Designed & Engineered by PipoZa Dev</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+<script src="wizard.js" defer></script>
+</body>
+</html>

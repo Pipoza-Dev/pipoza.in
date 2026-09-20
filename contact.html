@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="aurora">
+<head>
+<meta charset="UTF-8">
+<title>Contact Studio — PipoZa Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Connect with PipoZa Dev directly via WhatsApp or Email. We reply fast and are ready to launch your project in 4–5 working days.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index" class="brand">
+      <div class="brand-logo-wrap"><img src="PipoZa_Logo.png" alt="PipoZa Dev Logo"></div>
+      <span>PipoZa Dev<small data-i18n="nav.brand_sub">Bespoke Web Studio</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index" data-nav="index" data-i18n="nav.home">Home</a>
+      <a href="services" data-nav="services" data-i18n="nav.build">What We Build</a>
+      <a href="work" data-nav="work" data-i18n="nav.work">Our Work</a>
+      <a href="about" data-nav="about" data-i18n="nav.about">About Studio</a>
+      <a href="contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switcher"></div>
+      <a href="start" class="btn btn-primary btn-sm" data-i18n="nav.start">Start Your Project →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="lang-switcher mobile-lang-wrap"></div>
+  <a href="index" class="m-link" data-nav="index"><span data-i18n="nav.home">Home</span> <span>→</span></a>
+  <a href="services" class="m-link" data-nav="services"><span data-i18n="nav.build">What We Build</span> <span>→</span></a>
+  <a href="work" class="m-link" data-nav="work"><span data-i18n="nav.work">Our Work</span> <span>→</span></a>
+  <a href="about" class="m-link" data-nav="about"><span data-i18n="nav.about">About Studio</span> <span>→</span></a>
+  <a href="contact" class="m-link active" data-nav="contact"><span data-i18n="nav.contact">Contact</span> <span>→</span></a>
+  <div class="mn-cta">
+    <a href="start" class="btn btn-primary btn-wide" data-i18n="cta.start_now">Start Your Project Now →</a>
+    <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link data-i18n="cta.or_chat">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow-badge">
+        <span class="dot"></span>
+        <span data-i18n="contact.kicker">Studio Available · Avg Response Time: &lt; 15 Mins</span>
+      </div>
+      <h1 style="margin-top:10px;" data-i18n="contact.title">Connect directly with our lead engineers.</h1>
+      <p data-i18n="contact.desc">Have a question or prefer to bypass the form? Reach out directly via WhatsApp or email. We will review your project requirements and respond promptly.</p>
+    </div>
+  </section>
+
+  <!-- ================= DIRECT CONTACT CARDS ================= -->
+  <section class="section-pad" style="padding-top:10px;">
+    <div class="wrap">
+      <div class="row2" style="gap:24px;">
+        <div class="policy-card glass reveal tilt-card" style="text-align:center; padding:44px 30px;">
+          <div class="ic" style="margin:0 auto 20px; background:rgba(23,227,166,0.12); color:var(--go); border-color:rgba(23,227,166,0.3);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          </div>
+          <h3 style="font-size:22px; margin-bottom:6px;" data-i18n="contact.wa_card_title">WhatsApp Direct Chat</h3>
+          <p style="color:var(--go); font-weight:700; font-family:'Space Grotesk'; font-size:18px; margin-bottom:12px;">+91 86700 88964</p>
+          <p style="color:var(--text-dim); font-size:14px; margin-bottom:26px; line-height:1.6;" data-i18n="contact.wa_card_desc">The fastest way to reach us. Chat directly with the engineering team to discuss scope, pricing, and timelines.</p>
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-wa-link data-i18n="contact.open_wa">Open WhatsApp Chat ↗</a>
+            <button class="btn btn-ghost btn-sm" onclick="navigator.clipboard.writeText('+918670088964'); PIPOZA.showToast('WhatsApp number copied!'); PIPOZA.audio.playChime();" data-i18n="contact.copy_num">Copy Number</button>
+          </div>
+        </div>
+
+        <div class="policy-card glass reveal tilt-card" style="text-align:center; padding:44px 30px;">
+          <div class="ic" style="margin:0 auto 20px; background:color-mix(in srgb, var(--c1) 15%, transparent); color:var(--c1); border-color:color-mix(in srgb, var(--c1) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </div>
+          <h3 style="font-size:22px; margin-bottom:6px;" data-i18n="contact.email_card_title">Direct Studio Email</h3>
+          <p style="color:var(--c1); font-weight:700; font-family:'Space Grotesk'; font-size:18px; margin-bottom:12px;">pipoza.dev@gmail.com</p>
+          <p style="color:var(--text-dim); font-size:14px; margin-bottom:26px; line-height:1.6;" data-i18n="contact.email_card_desc">Send us your RFP, design references, or project details. We usually respond with an estimate within a few hours.</p>
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <a href="mailto:pipoza.dev@gmail.com" class="btn btn-grad btn-sm" data-email-link data-i18n="contact.send_email">Send Email ↗</a>
+            <button class="btn btn-ghost btn-sm" onclick="navigator.clipboard.writeText('pipoza.dev@gmail.com'); PIPOZA.showToast('Email address copied!'); PIPOZA.audio.playChime();" data-i18n="contact.copy_email">Copy Email</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zero Advance Guarantee Banner -->
+      <div class="zero-advance-banner reveal" style="max-width:820px; margin:28px auto 0 auto;">
+        <div class="zab-icon">🛡️</div>
+        <div class="zab-content">
+          <strong data-i18n="trust.title">Zero Advance Payment Guarantee</strong>
+          <span data-i18n="trust.desc">We do not take any advance payment. You only pay after your website is completely built and delivered to your 100% satisfaction. (Pricing discussed & finalized upfront).</span>
+        </div>
+      </div>
+
+      <!-- Quick Message Composer -->
+      <div class="calc-card glass reveal tilt-card" style="margin-top:24px; max-width:820px; margin-left:auto; margin-right:auto;">
+        <h3 style="font-size:22px; margin-bottom:8px;" data-i18n="contact.composer_title">Instant Message Composer</h3>
+        <p style="color:var(--text-dim); font-size:14px; margin-bottom:22px;" data-i18n="contact.composer_sub">All details are compulsory. Type your message below to send directly to our team via WhatsApp or Email:</p>
+        <div class="field">
+          <label data-i18n="field.msg_sender">Your Name / Business Name *</label>
+          <input type="text" id="quickSender" data-i18n-placeholder="field.msg_sender_ph" placeholder="e.g. Rahul Sharma (Zenith Logistics)" required>
+        </div>
+        <div class="field">
+          <label data-i18n="field.msg_body">What are you looking to build? *</label>
+          <textarea id="quickBody" data-i18n-placeholder="field.msg_body_ph" placeholder="Hi PipoZa Dev, I'm looking for a modern website for our new startup. Can you provide an estimate and availability for a 4-5 day sprint?" required></textarea>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button class="btn btn-primary btn-sm" id="btnQuickWhatsApp" data-i18n="contact.send_wa">Send via WhatsApp →</button>
+          <button class="btn btn-ghost btn-sm" id="btnQuickEmail" data-i18n="contact.send_em">Send via Email →</button>
+        </div>
+      </div>
+
+      <div class="note-box reveal" style="max-width:820px; margin-left:auto; margin-right:auto; margin-top:30px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <span><span data-i18n="contact.builder_prompt">Prefer a step-by-step guided flow with color and budget pickers? Launch our</span> <a href="start" style="color:var(--go); font-weight:700;" data-i18n="contact.builder_link">Project Builder Form</a> <span data-i18n="contact.builder_time">— it takes just 1 minute.</span></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="PipoZa_Logo.png" alt="PipoZa Dev"> PipoZa Dev</div>
+        <p class="desc" data-i18n="foot.desc">A boutique digital studio engineering custom web experiences for tech, medical, gaming, retail, and business brands. Free hosting included for life.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore_title">Studio</h4>
+        <div class="flinks">
+          <a href="services" data-i18n="foot.services">What We Build</a>
+          <a href="work" data-i18n="foot.work">Our Work & Case Studies</a>
+          <a href="about" data-i18n="foot.about">About Studio</a>
+          <a href="contact" data-i18n="foot.contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect_title">Connect</h4>
+        <div class="flinks">
+          <a href="start" data-i18n="foot.start">Start a Project</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> <span data-i18n="foot.made">Designed & Engineered by PipoZa Dev</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnWA = document.getElementById('btnQuickWhatsApp');
+    const btnEmail = document.getElementById('btnQuickEmail');
+    const senderInput = document.getElementById('quickSender');
+    const bodyInput = document.getElementById('quickBody');
+
+    function validateInputs() {
+      const sender = senderInput.value.trim();
+      const body = bodyInput.value.trim();
+
+      if (!sender) {
+        senderInput.classList.add('input-invalid');
+        senderInput.focus();
+        setTimeout(() => senderInput.classList.remove('input-invalid'), 2500);
+        PIPOZA.showToast('⚠️ Please enter your Name or Business Name.');
+        if (PIPOZA.audio && PIPOZA.audio.playPop) PIPOZA.audio.playPop(260, 0.08);
+        return false;
+      }
+      if (!body) {
+        bodyInput.classList.add('input-invalid');
+        bodyInput.focus();
+        setTimeout(() => bodyInput.classList.remove('input-invalid'), 2500);
+        PIPOZA.showToast('⚠️ Please enter your project description or question.');
+        if (PIPOZA.audio && PIPOZA.audio.playPop) PIPOZA.audio.playPop(260, 0.08);
+        return false;
+      }
+      return true;
+    }
+
+    function getMessage() {
+      const sender = senderInput.value.trim();
+      const body = bodyInput.value.trim();
+      return `New Website Inquiry from ${sender}:\n\n${body}\n\n[Zero Advance Guarantee Requested]\nSent via pipoza.dev/contact`;
+    }
+
+    if (btnWA) {
+      btnWA.addEventListener('click', () => {
+        if (!validateInputs()) return;
+        const msg = getMessage();
+        window.open(`https://wa.me/${PIPOZA.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+        PIPOZA.showToast('Launching WhatsApp…');
+        PIPOZA.audio.playPop(650, 0.05);
+      });
+    }
+
+    if (btnEmail) {
+      btnEmail.addEventListener('click', () => {
+        if (!validateInputs()) return;
+        const msg = getMessage();
+        const sender = senderInput.value.trim();
+        if (PIPOZA.openEmailModal) {
+          PIPOZA.openEmailModal(`Project Inquiry — ${sender}`, msg);
+        } else {
+          window.location.href = `mailto:${PIPOZA.CONTACT_EMAIL}?subject=${encodeURIComponent('Project Inquiry — ' + sender)}&body=${encodeURIComponent(msg)}`;
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

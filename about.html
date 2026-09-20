@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="aurora">
+<head>
+<meta charset="UTF-8">
+<title>About PipoZa Dev — The Boutique Web Studio That Ships</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about PipoZa Dev: our 4-5 day sprint methodology, modern tech stack, handcrafted code philosophy, and client-first culture.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index" class="brand">
+      <div class="brand-logo-wrap"><img src="PipoZa_Logo.png" alt="PipoZa Dev Logo"></div>
+      <span>PipoZa Dev<small data-i18n="nav.brand_sub">Bespoke Web Studio</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index" data-nav="index" data-i18n="nav.home">Home</a>
+      <a href="services" data-nav="services" data-i18n="nav.build">What We Build</a>
+      <a href="work" data-nav="work" data-i18n="nav.work">Our Work</a>
+      <a href="about" data-nav="about" data-i18n="nav.about">About Studio</a>
+      <a href="contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switcher"></div>
+      <a href="start" class="btn btn-primary btn-sm" data-i18n="nav.start">Start Your Project →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="lang-switcher mobile-lang-wrap"></div>
+  <a href="index" class="m-link" data-nav="index"><span data-i18n="nav.home">Home</span> <span>→</span></a>
+  <a href="services" class="m-link" data-nav="services"><span data-i18n="nav.build">What We Build</span> <span>→</span></a>
+  <a href="work" class="m-link" data-nav="work"><span data-i18n="nav.work">Our Work</span> <span>→</span></a>
+  <a href="about" class="m-link active" data-nav="about"><span data-i18n="nav.about">About Studio</span> <span>→</span></a>
+  <a href="contact" class="m-link" data-nav="contact"><span data-i18n="nav.contact">Contact</span> <span>→</span></a>
+  <div class="mn-cta">
+    <a href="start" class="btn btn-primary btn-wide" data-i18n="cta.start_now">Start Your Project Now →</a>
+    <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link data-i18n="cta.or_chat">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="kicker" data-i18n="about.kicker">Studio Philosophy</span>
+      <h1 data-i18n="about.title">A dedicated web engineering studio built around speed, craft, and precision.</h1>
+      <p data-i18n="about.desc">We founded PipoZa Dev to eliminate the two biggest headaches in web design: bloated agencies that take two months to deliver, and flimsy templates that break on mobile. We handcraft fast, stunning websites that actually convert.</p>
+    </div>
+  </section>
+
+  <!-- ================= STUDIO PILLARS ================= -->
+  <section class="section-pad" style="padding-top:10px;">
+    <div class="wrap">
+      <div class="row2" style="gap:24px;">
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c1)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          </div>
+          <h3 data-i18n="about.p1_title">The 4–5 Day Sprint Focus</h3>
+          <p data-i18n="about.p1_desc">We work in focused, uninterrupted development sprints. Instead of juggling dozens of concurrent projects with long idle periods, we concentrate on your build end-to-end to launch in 4 to 5 working days.</p>
+        </div>
+
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--go)" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 data-i18n="about.p2_title">Zero Template Bloat</h3>
+          <p data-i18n="about.p2_desc">Every website is hand-coded with clean modern HTML, CSS, and vanilla JavaScript. No heavy third-party plugins that drag down performance or break unexpectedly during browser updates.</p>
+        </div>
+      </div>
+
+      <div class="row2" style="gap:24px; margin-top:24px;">
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c2)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 data-i18n="about.p3_title">Cloud Hosting On Us</h3>
+          <p data-i18n="about.p3_desc">We host every project on high-speed global cloud edge networks at no extra cost to you. Your website stays live 24/7 with zero maintenance overhead or hidden recurring hosting fees.</p>
+        </div>
+
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c3)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 data-i18n="about.p4_title">Talk Directly to Engineers</h3>
+          <p data-i18n="about.p4_desc">No middlemen, account managers, or ticket queues. You talk directly with the developer building your website over WhatsApp, email, or a phone call, so updates happen in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= TECH STACK MATRIX ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="about.tech_kicker">Modern Engineering</span>
+        <h2 data-i18n="about.tech_title">Our Core Technology Stack</h2>
+        <p data-i18n="about.tech_sub">We harness the latest open web standards to build websites that look futuristic, run at 60fps, and load instantaneously.</p>
+      </div>
+
+      <div class="cat-grid">
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c1)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 data-i18n="about.t1_title">Modern ES6+ JavaScript</h3>
+          <p data-i18n="about.t1_desc">Lightweight, asynchronous script execution with smooth micro-interactions and zero runtime dependencies.</p>
+          <span class="tag" data-i18n="about.t1_tag">60 FPS Smoothness</span>
+        </div>
+
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c2)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          </div>
+          <h3 data-i18n="about.t2_title">HTML5 Canvas & 3D Tilts</h3>
+          <p data-i18n="about.t2_desc">Interactive constellation particle physics, dynamic specular cursor reflections, and immersive depth.</p>
+          <span class="tag" data-i18n="about.t2_tag">Hardware Accelerated</span>
+        </div>
+
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--go)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 data-i18n="about.t3_title">Global Edge CDN Hosting</h3>
+          <p data-i18n="about.t3_desc">Ultra-low latency content delivery networks serving assets from the nearest geographical server node.</p>
+          <span class="tag" data-i18n="about.t3_tag">&lt; 50ms Edge Latency</span>
+        </div>
+
+        <div class="cat-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c3)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 data-i18n="about.t4_title">Responsive Engine</h3>
+          <p data-i18n="about.t4_desc">Fluid typography clamp rules and CSS grid layouts ensuring seamless adaptation to every screen aspect ratio.</p>
+          <span class="tag" data-i18n="about.t4_tag">Zero Layout Shifts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="wrap">
+      <div class="wizard-wrap glass reveal" style="text-align:center; padding:65px 40px;">
+        <h2 style="font-size:clamp(26px,3.6vw,38px); margin-bottom:14px;" data-i18n="about.cta_title">Ready to build something extraordinary?</h2>
+        <p style="color:var(--text-dim); max-width:480px; margin:0 auto 28px; font-size:15.5px;" data-i18n="about.cta_sub">Experience web engineering the way it should be: transparent, blisteringly fast, and built exclusively for your business.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="start" class="btn btn-primary" data-i18n="hero.cta_start">Start Your Project →</a>
+          <a href="work" class="btn btn-ghost" data-i18n="hero.cta_work">Explore Live Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="PipoZa_Logo.png" alt="PipoZa Dev"> PipoZa Dev</div>
+        <p class="desc" data-i18n="foot.desc">A boutique digital studio engineering custom web experiences for tech, medical, gaming, retail, and business brands. Free hosting included for life. Zero advance payment required.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore_title">Studio</h4>
+        <div class="flinks">
+          <a href="services" data-i18n="foot.services">What We Build</a>
+          <a href="work" data-i18n="foot.work">Our Work & Case Studies</a>
+          <a href="about" data-i18n="foot.about">About Studio</a>
+          <a href="contact" data-i18n="foot.contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect_title">Connect</h4>
+        <div class="flinks">
+          <a href="start" data-i18n="foot.start">Start a Project</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> <span data-i18n="foot.made">Designed & Engineered by PipoZa Dev</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>

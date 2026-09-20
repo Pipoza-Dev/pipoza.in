@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="aurora">
+<head>
+<meta charset="UTF-8">
+<title>PipoZa Dev — Bespoke Websites Engineered for High Growth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PipoZa Dev crafts high-performance, bespoke websites for tech startups, clinics, gaming brands, e-commerce & businesses. Live in 4–5 working days with free hosting included.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index" class="brand">
+      <div class="brand-logo-wrap">
+        <img src="PipoZa_Logo.png" alt="PipoZa Dev Logo">
+      </div>
+      <span>
+        PipoZa Dev
+        <small data-i18n="nav.brand_sub">Bespoke Web Studio</small>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index" data-nav="index" data-i18n="nav.home">Home</a>
+      <a href="services" data-nav="services" data-i18n="nav.build">What We Build</a>
+      <a href="work" data-nav="work" data-i18n="nav.work">Our Work</a>
+      <a href="about" data-nav="about" data-i18n="nav.about">About Studio</a>
+      <a href="contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switcher"></div>
+      <a href="start" class="btn btn-primary btn-sm" data-i18n="nav.start">Start Your Project →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="lang-switcher mobile-lang-wrap"></div>
+  <a href="index" class="m-link active" data-nav="index"><span data-i18n="nav.home">Home</span> <span>→</span></a>
+  <a href="services" class="m-link" data-nav="services"><span data-i18n="nav.build">What We Build</span> <span>→</span></a>
+  <a href="work" class="m-link" data-nav="work"><span data-i18n="nav.work">Our Work</span> <span>→</span></a>
+  <a href="about" class="m-link" data-nav="about"><span data-i18n="nav.about">About Studio</span> <span>→</span></a>
+  <a href="contact" class="m-link" data-nav="contact"><span data-i18n="nav.contact">Contact</span> <span>→</span></a>
+  <div class="mn-cta">
+    <a href="start" class="btn btn-primary btn-wide" data-i18n="cta.start_now">Start Your Project Now →</a>
+    <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link data-i18n="cta.or_chat">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow-badge">
+          <span class="dot"></span>
+          <span data-i18n="hero.badge">Live in 4–5 Working Days · Booking Now</span>
+        </div>
+        <div class="hero-advance-pill">
+          <span class="dot" style="background:#17e3a6;"></span>
+          <span data-i18n="hero.advance_badge">🛡️ 0₹ Advance · Pay Only After Completion</span>
+        </div>
+        <h1>
+          <span data-i18n="hero.h1_prefix">Bespoke websites for</span><br>
+          <span class="rotator" id="rotator"><span>tech startups</span></span><br>
+          <span data-i18n="hero.h1_built">built to</span> <span class="g" data-i18n="hero.h1_gradient">dominate & convert</span>.
+        </h1>
+        <p class="lead" data-i18n="hero.lead">
+          PipoZa Dev designs and engineers custom web experiences from scratch — no rigid templates stretched to fit. Every build is tailored to your business, with free hosting included for life.
+        </p>
+        <div class="hero-actions">
+          <a href="start" class="btn btn-primary" data-i18n="hero.cta_start">Start Your Project →</a>
+          <a href="work" class="btn btn-ghost" data-i18n="hero.cta_work">Explore Live Work</a>
+        </div>
+        <div class="hero-ticker">
+          <div class="track" id="tickerTrack"></div>
+        </div>
+      </div>
+
+      <!-- Holographic Interactive 3D Visual -->
+      <div class="hero-visual">
+        <div class="float-tags">
+          <div class="f-tag t1 glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--go);"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="ftag.hosting">Free Lifetime Hosting</span></div>
+          <div class="f-tag t2 glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--c1);"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg> <span data-i18n="ftag.mobile">100% Mobile-First</span></div>
+          <div class="f-tag t3 glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--c2);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span data-i18n="ftag.hidden">0₹ Hidden Fees</span></div>
+          <div class="f-tag t4 glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--c3);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-i18n="ftag.speed">4–5 Day Turnaround</span></div>
+        </div>
+
+        <svg class="circuit" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+          <path id="c1p" d="M40 80 L150 80 L150 150 L200 150"/>
+          <path id="c2p" d="M360 60 L260 60 L260 130 L200 160"/>
+          <path id="c3p" d="M50 320 L140 320 L140 250 L200 230"/>
+          <path id="c4p" d="M355 330 L255 330 L255 260 L200 235"/>
+          <path d="M200 40 L200 120"/><path d="M200 280 L200 360"/>
+          <circle class="node" cx="40" cy="80" r="4.5"/><circle class="node" cx="150" cy="80" r="3.5"/>
+          <circle class="node" cx="360" cy="60" r="4.5"/><circle class="node" cx="260" cy="60" r="3.5"/>
+          <circle class="node" cx="50" cy="320" r="4.5"/><circle class="node" cx="140" cy="320" r="3.5"/>
+          <circle class="node" cx="355" cy="330" r="4.5"/><circle class="node" cx="255" cy="330" r="3.5"/>
+          <circle class="node" cx="200" cy="40" r="4.5"/><circle class="node" cx="200" cy="360" r="4.5"/>
+          <circle class="pulse" r="3.6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0s"><mpath href="#c1p"/></animateMotion></circle>
+          <circle class="pulse" r="3.6"><animateMotion dur="3.9s" repeatCount="indefinite" begin="1s"><mpath href="#c2p"/></animateMotion></circle>
+          <circle class="pulse" r="3.6"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.5s"><mpath href="#c3p"/></animateMotion></circle>
+          <circle class="pulse" r="3.6"><animateMotion dur="4.2s" repeatCount="indefinite" begin="1.6s"><mpath href="#c4p"/></animateMotion></circle>
+        </svg>
+
+        <div class="orb">
+          <div class="orb-glow"></div>
+          <div class="orb-ring"></div>
+          <div class="orb-ring-2"></div>
+          <div class="orb-core" title="PipoZa Dev Core">
+            <img src="PipoZa_Logo.png" alt="PipoZa Dev Logo Emblem">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Performance Stats -->
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat glass reveal tilt-card" data-count="8" data-suffix="+">
+          <div class="num">0</div>
+          <div class="lbl" data-i18n="stat.categories">Bespoke Site Categories</div>
+        </div>
+        <div class="stat glass reveal tilt-card" data-count="5" data-suffix=" Days">
+          <div class="num">0</div>
+          <div class="lbl" data-i18n="stat.turnaround">Maximum Turnaround Time</div>
+        </div>
+        <div class="stat glass reveal tilt-card" data-count="100" data-suffix="%">
+          <div class="num">0</div>
+          <div class="lbl" data-i18n="stat.mobile">Mobile & SEO Optimized</div>
+        </div>
+        <div class="stat glass reveal tilt-card" data-count="0" data-suffix="₹">
+          <div class="num">0</div>
+          <div class="lbl" data-i18n="stat.hosting">Extra Cost For Cloud Hosting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= WHAT WE BUILD ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="sec.what_we_build">Tailored Engineering</span>
+        <h2 data-i18n="sec.studio_heading">One studio, every kind of website.</h2>
+        <p data-i18n="sec.studio_desc">Whatever your business does, its website should feel unmistakably built for it — not compromised by a cookie-cutter template.</p>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+      <div style="text-align:center; margin-top:42px;">
+        <a href="services" class="btn btn-ghost" data-i18n="sec.view_services">View Full Services & Deliverables →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= INTERACTIVE WORKS SHOWCASE ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="showcase.kicker">Case Studies & Portfolios</span>
+        <h2 data-i18n="showcase.heading">Interactive Live Showcase</h2>
+        <p data-i18n="showcase.desc">Preview real websites we've engineered — test the live responsiveness between Desktop and Mobile in the simulator below.</p>
+      </div>
+      <div id="worksShowcase"></div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= THE 4-5 DAY SPRINT PROCESS ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="proc.kicker">Transparent Methodology</span>
+        <h2 data-i18n="proc.heading">The 4–5 Day Sprint.</h2>
+        <p data-i18n="proc.desc">From initial concept to a blazing-fast live website, here is exactly how we deliver without delays.</p>
+      </div>
+      <div class="process">
+        <div class="process-line"></div>
+        <div class="p-step glass reveal tilt-card">
+          <div class="num-wrap">01</div>
+          <h3 data-i18n="proc.step1_title">1. Define Vision</h3>
+          <p data-i18n="proc.step1_desc">Share your business model, target audience, and style preferences in our 1-minute guided form.</p>
+          <span class="step-time" data-i18n="proc.step1_time">Day 1</span>
+        </div>
+        <div class="p-step glass reveal tilt-card">
+          <div class="num-wrap">02</div>
+          <h3 data-i18n="proc.step2_title">2. Lock Direction</h3>
+          <p data-i18n="proc.step2_desc">We connect directly over WhatsApp or a brief call to align on typography, color aesthetics, and core features.</p>
+          <span class="step-time" data-i18n="proc.step2_time">Day 1–2</span>
+        </div>
+        <div class="p-step glass reveal tilt-card">
+          <div class="num-wrap">03</div>
+          <h3 data-i18n="proc.step3_title">3. Design & Code</h3>
+          <p data-i18n="proc.step3_desc">We handcraft your website with modern code, micro-animations, and complete mobile optimization.</p>
+          <span class="step-time" data-i18n="proc.step3_time">Day 2–4</span>
+        </div>
+        <div class="p-step glass reveal tilt-card">
+          <div class="num-wrap">04</div>
+          <h3 data-i18n="proc.step4_title">4. Global Launch</h3>
+          <p data-i18n="proc.step4_desc">Your site goes live worldwide on free PipoZa hosting or connected to your custom domain.</p>
+          <span class="step-time" data-i18n="proc.step4_time">Day 4–5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= CLIENT TESTIMONIALS ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker" data-i18n="testi.kicker">Verified Client Feedback</span>
+        <h2 data-i18n="testi.title">What founders say about shipping with us.</h2>
+        <p data-i18n="testi.desc">Real feedback from businesses that launched their digital presence in 4–5 days with PipoZa Dev.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card glass reveal tilt-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote" data-i18n="testi.q1">“PipoZa Dev delivered our clinic website in exactly 4 days. Patients find it super easy to explore our non-surgical pain treatments and book appointments over WhatsApp. Flawless work!”</p>
+          <div class="test-author">
+            <div class="test-avatar" style="border-color:var(--go); color:var(--go);">RC</div>
+            <div class="test-meta">
+              <strong data-i18n="testi.a1_name">Revive Pain Care Clinic</strong>
+              <small data-i18n="testi.a1_role">Naturopathic Health Hub · Noida</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass reveal tilt-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote" data-i18n="testi.q2">“The cyber aesthetic and sub-second page loads blew our investors away. Our conversion rate jumped 3.2x compared to our previous generic template. Zero bloat, pure speed.”</p>
+          <div class="test-author">
+            <div class="test-avatar" style="border-color:var(--c1); color:var(--c1);">AP</div>
+            <div class="test-meta">
+              <strong data-i18n="testi.a2_name">AeroProtocol Cloud</strong>
+              <small data-i18n="testi.a2_role">DevOps & Cloud Mesh Platform</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass reveal tilt-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote" data-i18n="testi.q3">“We avoided huge monthly agency bills and restrictive templates. Our store runs like lightning, looks bespoke, and the 1-tap WhatsApp checkout drives sales daily.”</p>
+          <div class="test-author">
+            <div class="test-avatar" style="border-color:var(--c2); color:var(--c2);">LB</div>
+            <div class="test-meta">
+              <strong data-i18n="testi.a3_name">Luxe Botanics</strong>
+              <small data-i18n="testi.a3_role">Organic Skincare Storefront · Mumbai</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ================= POLICY CARDS ================= -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="policy-grid">
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c1)" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 data-i18n="policy.hosting_title">Cloud Hosting, On Us</h3>
+          <p data-i18n-html="policy.hosting_desc">Every website we build goes online on <span class="hl">free PipoZa cloud hosting</span>. No recurring monthly hosting charges or surprise renewal fees.</p>
+        </div>
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--c2)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          </div>
+          <h3 data-i18n="policy.domain_title">Custom Domains at Cost</h3>
+          <p data-i18n-html="policy.domain_desc">Prefer <span class="hl">yourbrand.com</span> over a subdomain? We handle DNS and registrar configuration directly — you pay only the registrar's wholesale cost.</p>
+        </div>
+        <div class="policy-card glass reveal tilt-card">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--go)" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <h3 data-i18n="policy.sprint_title">4–5 Working Day Delivery</h3>
+          <p data-i18n-html="policy.sprint_desc">We work in dedicated sprints so your website launches in <span class="hl">4 to 5 working days</span>. Any refinements needed afterwards are handled promptly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL HIGH-CONVERTING CTA ================= -->
+  <section class="section-pad" style="padding-top:20px;">
+    <div class="wrap">
+      <div class="wizard-wrap glass reveal" style="text-align:center; padding:70px 40px; border-color:var(--border-strong);">
+        <h2 style="font-size:clamp(28px, 4vw, 42px); margin-bottom:16px;" data-i18n="cta.elevate_title">Ready to elevate your digital presence?</h2>
+        <p style="color:var(--text-dim); max-width:540px; margin:0 auto 34px; font-size:16px; line-height:1.65;" data-i18n="cta.elevate_desc">
+          Tell us about your brand — we'll handle the architecture, design, and launch. Reach out directly or complete our 1-minute project form.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="start" class="btn btn-primary" data-i18n="hero.cta_start">Start Your Project →</a>
+          <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-ghost" data-wa-link data-i18n="nav.chat_wa">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="PipoZa_Logo.png" alt="PipoZa Dev Logo">
+          <span>PipoZa Dev</span>
+        </div>
+        <p class="desc" data-i18n="foot.desc">A boutique digital studio engineering custom web experiences for tech, medical, gaming, retail, and business brands. Free hosting included for life. Zero advance payment required.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore_title">Explore Studio</h4>
+        <div class="flinks">
+          <a href="services" data-i18n="foot.services">What We Build</a>
+          <a href="work" data-i18n="foot.work">Our Work & Case Studies</a>
+          <a href="about" data-i18n="foot.about">About The Studio</a>
+          <a href="contact" data-i18n="foot.contact">Direct Contact Hub</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect_title">Connect Directly</h4>
+        <div class="flinks">
+          <a href="start" data-i18n="foot.start">Start a Project</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> <span data-i18n="foot.made">Designed & Engineered by PipoZa Dev</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+<script>
+  function renderHomeCategoriesAndTicker() {
+    const catGrid = document.getElementById('catGrid');
+    if (catGrid && PIPOZA.CATEGORIES) {
+      catGrid.innerHTML = PIPOZA.CATEGORIES.map(c => `
+        <div class="cat-card glass reveal tilt-card" onclick="location.href='start#step-1'">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none">${PIPOZA.ICONS[c.id] || PIPOZA.ICONS.other}</svg></div>
+          <h3 data-i18n="${c.labelKey}">${c.label}</h3>
+          <p data-i18n="${c.descKey}">${c.desc}</p>
+          <div class="card-footer">
+            <span class="tag" data-i18n="sec.sprint_badge">${PIPOZA.t('sec.sprint_badge')}</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>`).join('');
+    }
+
+    const tickerTrack = document.getElementById('tickerTrack');
+    if (tickerTrack && PIPOZA.CATEGORIES) {
+      const items = PIPOZA.CATEGORIES.map(c => c.label);
+      tickerTrack.innerHTML = [...items, ...items].map(t => `<span>⚡ ${t}</span>`).join('');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderHomeCategoriesAndTicker();
+    if (PIPOZA.initReveal) PIPOZA.initReveal();
+    window.addEventListener('pipoza:langchange', () => {
+      renderHomeCategoriesAndTicker();
+    });
+  });
+</script>
+</body>
+</html>
