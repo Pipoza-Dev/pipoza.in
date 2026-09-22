@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedType.id === 'other') document.getElementById('otherType').focus();
       }
       PIPOZA.audio.playPop(520, 0.04);
+      if (window.pipozaUpdateLivePreview) window.pipozaUpdateLivePreview();
     });
   }
 
@@ -173,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       PIPOZA.audio.playChime();
       PIPOZA.showToast(`Loaded ${p.label} preset`);
+      if (window.pipozaUpdateLivePreview) window.pipozaUpdateLivePreview();
     });
   }
 
@@ -204,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       opt.classList.add('sel');
       selectedStyle = opt.dataset.s;
       PIPOZA.audio.playPop(480, 0.03);
+      if (window.pipozaUpdateLivePreview) window.pipozaUpdateLivePreview();
     });
   }
 
@@ -257,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sw.classList.add('sel');
       selectedPalette = sw.dataset.pal;
       PIPOZA.audio.playPop(520, 0.03);
+      if (window.pipozaUpdateLivePreview) window.pipozaUpdateLivePreview();
     });
   }
 
@@ -722,4 +726,269 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     renderConfetti();
   }
+
+  /* =========================================================
+     LIVE INTERACTIVE WEBSITE PREVIEW ENGINE
+     Reacts dynamically to name, location, description,
+     category, style vibe, and color palette in real time!
+     ========================================================= */
+  function initLivePreview() {
+    const previewWrap = document.getElementById('wizardLivePreview');
+    if (!previewWrap) return;
+
+    const pvSite = document.getElementById('pvSite');
+    const pvViewport = document.getElementById('pvViewport');
+    const pvUrlSlug = document.getElementById('pvUrlSlug');
+    const pvBrandText = document.getElementById('pvBrandText');
+    const pvFootBrand = document.getElementById('pvFootBrand');
+    const pvHeroHeading = document.getElementById('pvHeroHeading');
+    const pvHeroDesc = document.getElementById('pvHeroDesc');
+    const pvTagText = document.getElementById('pvTagText');
+    const pvPrimaryBtnText = document.getElementById('pvPrimaryBtnText');
+    const pvNavCtaText = document.getElementById('pvNavCtaText');
+    const pvFeaturesGrid = document.getElementById('pvFeaturesGrid');
+    const pvThemeToggle = document.getElementById('pvThemeToggle');
+    const pvThemeIcon = document.getElementById('pvThemeIcon');
+    const pvThemeLabel = document.getElementById('pvThemeLabel');
+
+    const bizNameInput = document.getElementById('bizName');
+    const bizLocInput = document.getElementById('bizLocation');
+    const bizDescInput = document.getElementById('bizDesc');
+
+    const CATEGORY_CONTENT = {
+      medical: {
+        tag: '✦ Specialized Healing & Pain Relief',
+        headingPrefix: 'Restoring Mobility & Structural Health with ',
+        defaultDesc: 'Non-medicinal acupressure, naturopathy, and musculoskeletal rehabilitation addressing root causes without pills, injections or surgery.',
+        cta: 'Book Consultation',
+        navCta: 'Consult Now',
+        features: [
+          { icon: '🩺', title: 'Specialist Therapy', desc: '15+ years hands-on clinical pain management' },
+          { icon: '⚡', title: 'Zero Painkillers', desc: 'Holistic non-medicinal root-cause recovery' },
+          { icon: '📍', title: 'Easy Access Clinic', desc: 'Ground-floor mobility access & evening slots' }
+        ]
+      },
+      tech: {
+        tag: '✦ High-Performance Cloud Engine',
+        headingPrefix: 'Scale Infrastructure Without Limits with ',
+        defaultDesc: 'Next-generation cloud orchestration and AI acceleration built to deliver blazing speed, resilient architecture, and zero downtime.',
+        cta: 'Start Free Sprint',
+        navCta: 'Get Started',
+        features: [
+          { icon: '⚡', title: '99.99% Uptime', desc: 'Distributed cloud fabric engineered for high growth' },
+          { icon: '🔒', title: 'Zero-Trust Security', desc: 'End-to-end encrypted protocol compliance' },
+          { icon: '🚀', title: 'Instant Deployment', desc: 'Deploy production pipelines in under 60 seconds' }
+        ]
+      },
+      gaming: {
+        tag: '✦ Competitive Esports Arena',
+        headingPrefix: 'Dominating Every Arena Together with ',
+        defaultDesc: 'High-energy esports tournaments, creator rosters, and community hubs engineered with neon visuals and real-time Discord sync.',
+        cta: 'Join Community',
+        navCta: 'Play Now',
+        features: [
+          { icon: '🎮', title: 'Pro Tournaments', desc: 'Weekly competitive cups & ranked leaderboards' },
+          { icon: '👾', title: 'Creator Hub', desc: 'Verified roster perks, stream overlays & drops' },
+          { icon: '🔥', title: 'Discord Community', desc: 'Active 24/7 gamer clan and team matchmaking' }
+        ]
+      },
+      ecom: {
+        tag: '✦ Curated 2026 Collection',
+        headingPrefix: 'Discover Luxury Craft & Essentials at ',
+        defaultDesc: 'Elevated lifestyle catalog with lightning-fast search, seamless checkout, and verified doorstep delivery across India and worldwide.',
+        cta: 'Explore Collection',
+        navCta: 'Shop Now',
+        features: [
+          { icon: '🛍️', title: 'Premium Curation', desc: 'Handcrafted items with strict quality audits' },
+          { icon: '⚡', title: 'Instant Checkout', desc: '1-click UPI, Cards & Cash on Delivery' },
+          { icon: '📦', title: 'Fast Delivery', desc: 'Dispatched within 24 hours in luxury packaging' }
+        ]
+      },
+      restaurant: {
+        tag: '✦ Artisanal Dining & Cloud Kitchen',
+        headingPrefix: 'Authentic Flavor & Fine Taste by ',
+        defaultDesc: 'Slow-cooked delicacies, signature recipes, and intimate dining experiences prepared fresh every day with pure ingredients.',
+        cta: 'Reserve a Table',
+        navCta: 'Order Food',
+        features: [
+          { icon: '🍽️', title: 'Chef Specials', desc: 'Seasonal tasting menus and authentic heritage craft' },
+          { icon: '🌿', title: 'Farm-Fresh Sourcing', desc: '100% organic, locally grown produce daily' },
+          { icon: '🛵', title: 'Express Delivery', desc: 'Hot, tamper-proof packaging straight to your door' }
+        ]
+      },
+      fitness: {
+        tag: '✦ Elite Performance & Physique',
+        headingPrefix: 'Unleash Your Peak Strength with ',
+        defaultDesc: 'Data-driven training programs, bespoke nutrition protocols, and champion mindset coaching designed for unstoppable physical transformation.',
+        cta: 'Start Transformation',
+        navCta: 'Join Gym',
+        features: [
+          { icon: '💪', title: 'Custom Coaching', desc: 'Tailored 1-on-1 progressive overload routines' },
+          { icon: '🥗', title: 'Macro Diet Plans', desc: 'Targeted calorie & nutrition blueprints' },
+          { icon: '🏆', title: 'Proven Results', desc: 'Over 500+ successful body transformations' }
+        ]
+      },
+      portfolio: {
+        tag: '✦ Selected Works & Creative Direction',
+        headingPrefix: 'Designing Impactful Digital Identities as ',
+        defaultDesc: 'Multi-disciplinary digital design and development studio crafting memorable brands, interactive experiences, and digital products.',
+        cta: 'View Selected Works',
+        navCta: 'Hire Studio',
+        features: [
+          { icon: '✦', title: 'Brand Identity', desc: 'Typography, visual systems and creative direction' },
+          { icon: '💻', title: 'Interactive Web', desc: 'Custom code, WebGL, 3D and responsive UI' },
+          { icon: '📈', title: 'Product Strategy', desc: 'Conversion-driven architecture and UX research' }
+        ]
+      },
+      realestate: {
+        tag: '✦ Exclusive Prime Real Estate',
+        headingPrefix: 'Find Your Sanctuary with ',
+        defaultDesc: 'Curated luxury villas, prime commercial suites, and waterfront residences in premier destinations with full legal transparency.',
+        cta: 'Schedule Private Tour',
+        navCta: 'View Listings',
+        features: [
+          { icon: '🏢', title: 'Prime Locations', desc: 'High-yield verified properties in top tier cities' },
+          { icon: '📑', title: 'Zero Hidden Fees', desc: 'Clear documentation and legal verification support' },
+          { icon: '🤝', title: 'VIP Consultation', desc: 'Private showings and customized portfolio advice' }
+        ]
+      },
+      other: {
+        tag: '✦ Bespoke Digital Platform',
+        headingPrefix: 'High-Impact Digital Solutions by ',
+        defaultDesc: 'Custom engineered web experiences tailored to turn visitors into lifelong clients with blazing speed and free lifetime hosting.',
+        cta: 'Explore Platform',
+        navCta: 'Contact Us',
+        features: [
+          { icon: '⚡', title: 'Bespoke Engineering', desc: 'Zero generic templates — crafted from scratch' },
+          { icon: '🌐', title: 'Free Cloud Hosting', desc: 'Enterprise SSL, CDN & lifetime hosting included' },
+          { icon: '🛡️', title: 'Zero Advance Payment', desc: 'Pay only after 100% satisfaction upon delivery' }
+        ]
+      }
+    };
+
+    function updatePreview() {
+      const rawName = bizNameInput?.value.trim() || '';
+      const name = rawName || 'Your Brand Name';
+      const slug = rawName ? rawName.toLowerCase().replace(/[^a-z0-9]/g, '') : 'yourbrand';
+
+      if (pvBrandText) pvBrandText.textContent = name;
+      if (pvFootBrand) pvFootBrand.textContent = name;
+      if (pvUrlSlug) pvUrlSlug.textContent = slug || 'yourbrand';
+
+      const loc = bizLocInput?.value.trim() || '';
+      const customDesc = bizDescInput?.value.trim() || '';
+
+      const catId = (selectedType && selectedType.id) || 'tech';
+      const content = CATEGORY_CONTENT[catId] || CATEGORY_CONTENT.other;
+
+      if (pvTagText) {
+        pvTagText.textContent = loc ? `${content.tag} · ${loc}` : `${content.tag} · Global`;
+      }
+
+      if (pvHeroHeading) {
+        pvHeroHeading.innerHTML = `${content.headingPrefix}<span class="pv-highlight" id="pvHeadingHighlight">${name}</span>`;
+      }
+
+      if (pvHeroDesc) {
+        pvHeroDesc.textContent = customDesc || content.defaultDesc;
+      }
+
+      if (pvPrimaryBtnText) pvPrimaryBtnText.textContent = content.cta;
+      if (pvNavCtaText) pvNavCtaText.textContent = content.navCta;
+
+      if (pvFeaturesGrid) {
+        pvFeaturesGrid.innerHTML = content.features.map(f => `
+          <div class="pv-feature-card">
+            <div class="pv-feat-icon">${f.icon}</div>
+            <div class="pv-feat-title">${f.title}</div>
+            <div class="pv-feat-desc">${f.desc}</div>
+          </div>
+        `).join('');
+      }
+
+      if (pvSite) {
+        let styleClass = 'style-minimal';
+        const currentStyle = (selectedStyle || '').toLowerCase();
+        if (currentStyle.includes('bold')) styleClass = 'style-bold';
+        else if (currentStyle.includes('corp') || currentStyle.includes('trust')) styleClass = 'style-corp';
+        else if (currentStyle.includes('cyber') || currentStyle.includes('futur')) styleClass = 'style-cyber';
+        else if (currentStyle.includes('artist')) styleClass = 'style-artist';
+        else styleClass = 'style-minimal';
+
+        pvSite.className = `pv-site ${styleClass}`;
+      }
+
+      applyPaletteToPreview();
+    }
+
+    function applyPaletteToPreview() {
+      if (!pvSite) return;
+      const pal = selectedPalette || 'Aurora Cyan';
+
+      let c1 = '#00d2ff', c2 = '#8a2be2', c3 = '#ff007f', go = '#00f5a0';
+
+      if (pal.includes('Cyberpunk')) {
+        c1 = '#ff0055'; c2 = '#7928ca'; c3 = '#ffe600'; go = '#00f0ff';
+      } else if (pal.includes('Matrix') || pal.includes('Emerald')) {
+        c1 = '#00ffa3'; c2 = '#00b4d8'; c3 = '#0077b6'; go = '#00ffa3';
+      } else if (pal.includes('Solar')) {
+        c1 = '#ffb703'; c2 = '#fb8500'; c3 = '#ff0054'; go = '#ffb703';
+      } else if (pal.includes('Ocean')) {
+        c1 = '#00b4d8'; c2 = '#4361ee'; c3 = '#7209b7'; go = '#4cc9f0';
+      } else if (pal.includes('Custom')) {
+        const custom = getCustomColors();
+        if (custom) {
+          c1 = custom.c1; c2 = custom.c2; c3 = custom.c3; go = custom.go;
+        }
+      }
+
+      pvSite.style.setProperty('--pv-c1', c1);
+      pvSite.style.setProperty('--pv-c2', c2);
+      pvSite.style.setProperty('--pv-c3', c3);
+      pvSite.style.setProperty('--pv-go', go);
+    }
+
+    if (bizNameInput) bizNameInput.addEventListener('input', updatePreview);
+    if (bizLocInput) bizLocInput.addEventListener('input', updatePreview);
+    if (bizDescInput) bizDescInput.addEventListener('input', updatePreview);
+    const otherTypeInput = document.getElementById('otherType');
+    if (otherTypeInput) otherTypeInput.addEventListener('input', updatePreview);
+
+    const deviceButtons = previewWrap.querySelectorAll('.dev-btn');
+    deviceButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        deviceButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const mode = btn.dataset.device;
+        if (mode === 'mobile') {
+          pvViewport.classList.add('mobile-view');
+        } else {
+          pvViewport.classList.remove('mobile-view');
+        }
+        PIPOZA.audio.playPop(540, 0.03);
+      });
+    });
+
+    if (pvThemeToggle) {
+      pvThemeToggle.addEventListener('click', () => {
+        const currentPvTheme = pvSite.getAttribute('data-pv-theme') || 'dark';
+        const newPvTheme = currentPvTheme === 'light' ? 'dark' : 'light';
+        pvSite.setAttribute('data-pv-theme', newPvTheme);
+        if (pvThemeIcon) pvThemeIcon.textContent = newPvTheme === 'light' ? '☀️' : '🌙';
+        if (pvThemeLabel) pvThemeLabel.textContent = newPvTheme === 'light' ? 'Light' : 'Dark';
+        PIPOZA.audio.playPop(620, 0.03);
+      });
+    }
+
+    window.addEventListener('pipoza-custom-palette-updated', () => {
+      applyPaletteToPreview();
+      updatePreview();
+    });
+
+    window.pipozaUpdateLivePreview = updatePreview;
+    updatePreview();
+  }
+
+  // Initialize Live Website Preview
+  initLivePreview();
 });

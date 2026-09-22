@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-palette="aurora">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <title>Contact Studio — PipoZa Dev</title>
@@ -70,17 +70,24 @@
   <!-- ================= DIRECT CONTACT CARDS ================= -->
   <section class="section-pad" style="padding-top:10px;">
     <div class="wrap">
-      <div class="row2" style="gap:24px;">
+      <div class="contact-grid-3">
         <div class="policy-card glass reveal tilt-card" style="text-align:center; padding:44px 30px;">
           <div class="ic" style="margin:0 auto 20px; background:rgba(23,227,166,0.12); color:var(--go); border-color:rgba(23,227,166,0.3);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
           </div>
-          <h3 style="font-size:22px; margin-bottom:6px;" data-i18n="contact.wa_card_title">WhatsApp Direct Chat</h3>
-          <p style="color:var(--go); font-weight:700; font-family:'Space Grotesk'; font-size:18px; margin-bottom:12px;">+91 86700 88964</p>
-          <p style="color:var(--text-dim); font-size:14px; margin-bottom:26px; line-height:1.6;" data-i18n="contact.wa_card_desc">The fastest way to reach us. Chat directly with the engineering team to discuss scope, pricing, and timelines.</p>
+          <h3 style="font-size:22px; margin-bottom:10px;" data-i18n="contact.wa_card_title">WhatsApp Direct Chat</h3>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:14px; font-family:'Space Grotesk', sans-serif;">
+            <a href="https://wa.me/917810888147" target="_blank" rel="noopener" style="color:var(--go); font-weight:700; font-size:16.5px; text-decoration:none;">
+              Piush Mandal: +91 78108 88147
+            </a>
+            <a href="https://wa.me/918670088964" target="_blank" rel="noopener" style="color:var(--c1); font-weight:700; font-size:16.5px; text-decoration:none;">
+              Arjo Mondal: +91 86700 88964
+            </a>
+          </div>
+          <p style="color:var(--text-dim); font-size:14px; margin-bottom:24px; line-height:1.6;" data-i18n="contact.wa_card_desc">The fastest way to reach us. Chat directly with the engineering team to discuss scope, pricing, and timelines.</p>
           <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-            <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-wa-link data-i18n="contact.open_wa">Open WhatsApp Chat ↗</a>
-            <button class="btn btn-ghost btn-sm" onclick="navigator.clipboard.writeText('+918670088964'); PIPOZA.showToast('WhatsApp number copied!'); PIPOZA.audio.playChime();" data-i18n="contact.copy_num">Copy Number</button>
+            <a href="https://wa.me/917810888147" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="about.chat_piush">Chat with Piush →</a>
+            <a href="https://wa.me/918670088964" target="_blank" rel="noopener" class="btn btn-grad btn-sm" data-i18n="about.chat_arjo">Chat with Arjo →</a>
           </div>
         </div>
 
@@ -94,6 +101,19 @@
           <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
             <a href="mailto:pipoza.dev@gmail.com" class="btn btn-grad btn-sm" data-email-link data-i18n="contact.send_email">Send Email ↗</a>
             <button class="btn btn-ghost btn-sm" onclick="navigator.clipboard.writeText('pipoza.dev@gmail.com'); PIPOZA.showToast('Email address copied!'); PIPOZA.audio.playChime();" data-i18n="contact.copy_email">Copy Email</button>
+          </div>
+        </div>
+
+        <div class="policy-card glass reveal tilt-card" style="text-align:center; padding:44px 30px;">
+          <div class="ic ic-ig" style="margin:0 auto 20px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <h3 style="font-size:22px; margin-bottom:6px;" data-i18n="contact.ig_card_title">Official Instagram</h3>
+          <p style="color:#e1306c; font-weight:700; font-family:'Space Grotesk'; font-size:18px; margin-bottom:12px;">@pipozadev.studio</p>
+          <p style="color:var(--text-dim); font-size:14px; margin-bottom:26px; line-height:1.6;" data-i18n="contact.ig_card_desc">Follow our design studio on Instagram for new launch previews, UI experiments, behind-the-scenes engineering, or drop a direct message.</p>
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <a href="https://www.instagram.com/pipozadev.studio/" target="_blank" rel="noopener" class="btn btn-ig btn-sm" data-ig-link data-i18n="contact.open_ig">Open Instagram @pipozadev.studio ↗</a>
+            <button class="btn btn-ghost btn-sm" onclick="navigator.clipboard.writeText('pipozadev.studio'); PIPOZA.showToast('Instagram handle copied!'); PIPOZA.audio.playChime();" data-i18n="contact.copy_ig">Copy Handle</button>
           </div>
         </div>
       </div>
@@ -155,6 +175,7 @@
           <a href="start" data-i18n="foot.start">Start a Project</a>
           <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
           <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+          <a href="https://www.instagram.com/pipozadev.studio/" target="_blank" rel="noopener" data-ig-link data-i18n="foot.ig_link">Instagram: @pipozadev.studio</a>
         </div>
       </div>
     </div>

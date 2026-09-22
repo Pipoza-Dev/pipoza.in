@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-palette="aurora">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <title>Start Your Project — 4–5 Day Sprint Builder | PipoZa Dev</title>
@@ -140,6 +140,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
             <span data-i18n="wiz.note_colors">Don't worry about being locked in — our design team will fine-tune colors, fonts, and layout nuances with you before development starts.</span>
           </div>
+          <div class="live-preview-hint">
+            <span class="ps-pulse-dot"></span>
+            <span>⚡ <strong>Live Sync Active:</strong> Watch the interactive website preview below transform instantly as you pick your style &amp; colors!</span>
+          </div>
         </div>
 
         <!-- STEP 4 — CONTACT & BUDGET -->
@@ -241,10 +245,118 @@
           </p>
         </div>
 
-        <!-- Bottom Wizard Navigation Controls -->
+        <!-- Wizard Navigation Controls (Directly Under Active Step) -->
         <div class="wiz-nav">
           <button class="btn btn-ghost" id="prevBtn" style="visibility:hidden;" data-i18n="wiz.btn_back">← Back</button>
           <button class="btn btn-grad" id="nextBtn" data-i18n="wiz.btn_next">Continue to Next Step →</button>
+        </div>
+
+        <!-- LIVE INTERACTIVE WEBSITE PREVIEW SECTION (Changes in real time with wizard input) -->
+        <div class="wizard-live-preview-section" id="wizardLivePreview">
+          <div class="preview-section-header">
+            <div class="ps-header-left">
+              <div class="ps-badge">
+                <span class="ps-pulse-dot"></span>
+                <span>Live Interactive Website Preview</span>
+              </div>
+              <span class="ps-subtext">Real-time simulation updates as you change your project name, category, style vibe &amp; colors</span>
+            </div>
+            <div class="ps-header-actions">
+              <!-- Viewport Switcher -->
+              <div class="device-switcher" id="pvDeviceSwitcher">
+                <button type="button" class="dev-btn active" data-device="desktop" title="Desktop View">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <span>Desktop</span>
+                </button>
+                <button type="button" class="dev-btn" data-device="mobile" title="Mobile View">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                  <span>Mobile</span>
+                </button>
+              </div>
+
+              <!-- Preview Theme Mode Toggle -->
+              <button type="button" class="pv-theme-toggle" id="pvThemeToggle" title="Toggle Preview Dark/Light Theme">
+                <span id="pvThemeIcon">🌙</span>
+                <span id="pvThemeLabel">Dark</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Browser Window Frame -->
+          <div class="pv-browser-window" id="pvBrowserWindow">
+            <div class="pv-window-bar">
+              <div class="pv-dots">
+                <span class="pv-dot red"></span>
+                <span class="pv-dot yellow"></span>
+                <span class="pv-dot green"></span>
+              </div>
+              <div class="pv-address-bar">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span class="pv-url-prefix">https://</span>
+                <span class="pv-url-slug" id="pvUrlSlug">yourbrand</span>
+                <span class="pv-url-domain">.pipoza.dev</span>
+              </div>
+              <div class="pv-status-indicator">
+                <span class="pv-status-dot"></span>
+                <span>Live Sync</span>
+              </div>
+            </div>
+
+            <!-- Viewport Area -->
+            <div class="pv-viewport" id="pvViewport">
+              <div class="pv-site" id="pvSite" data-pv-theme="dark">
+                <!-- Site Navbar -->
+                <header class="pv-nav">
+                  <div class="pv-brand">
+                    <div class="pv-brand-crest" id="pvBrandCrest">✦</div>
+                    <span class="pv-brand-text" id="pvBrandText">Your Brand Name</span>
+                  </div>
+                  <div class="pv-nav-links">
+                    <span class="pv-link active">Home</span>
+                    <span class="pv-link" id="pvNavLinkServices">Services</span>
+                    <span class="pv-link" id="pvNavLinkAbout">About</span>
+                    <span class="pv-link" id="pvNavLinkContact">Contact</span>
+                  </div>
+                  <button type="button" class="pv-nav-cta" id="pvNavCta">
+                    <span id="pvNavCtaText">Get Started</span>
+                    <span>→</span>
+                  </button>
+                </header>
+
+                <!-- Site Hero -->
+                <div class="pv-hero">
+                  <div class="pv-hero-tag" id="pvHeroTag">
+                    <span class="pv-tag-pulse"></span>
+                    <span id="pvTagText">✦ Specialized Web Experience · Global</span>
+                  </div>
+                  <h3 class="pv-hero-heading" id="pvHeroHeading">
+                    Next-Gen Experiences Engineered by <span class="pv-highlight" id="pvHeadingHighlight">Your Brand Name</span>
+                  </h3>
+                  <p class="pv-hero-desc" id="pvHeroDesc">
+                    High-performance digital platform designed to convert visitors into loyal clients, built with bespoke precision and zero compromises.
+                  </p>
+                  <div class="pv-hero-btns">
+                    <button type="button" class="pv-btn-primary" id="pvHeroBtnPrimary">
+                      <span id="pvPrimaryBtnText">Explore Services</span>
+                      <span>→</span>
+                    </button>
+                    <button type="button" class="pv-btn-ghost" id="pvHeroBtnSecondary">
+                      <span>Learn More</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="pv-features-grid" id="pvFeaturesGrid"></div>
+
+                <!-- Site Footer Strip -->
+                <footer class="pv-footer-strip">
+                  <span>© 2026 <strong id="pvFootBrand">Your Brand Name</strong>. Engineered with PipoZa Dev.</span>
+                  <span class="pv-free-badge">⚡ 100% Free Lifetime Cloud Hosting</span>
+                </footer>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -274,6 +386,7 @@
           <a href="start" data-i18n="foot.start">Start a Project</a>
           <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
           <a href="https://wa.me/918670088964" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 86700 88964</a>
+          <a href="https://www.instagram.com/pipozadev.studio/" target="_blank" rel="noopener" data-ig-link data-i18n="foot.ig_link">Instagram: @pipozadev.studio</a>
         </div>
       </div>
     </div>

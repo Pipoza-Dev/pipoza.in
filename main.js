@@ -6,7 +6,9 @@
 
 window.PIPOZA = window.PIPOZA || {};
 PIPOZA.CONTACT_EMAIL = "pipoza.dev@gmail.com";
-PIPOZA.WHATSAPP_NUMBER = "918670088964"; // country code + number
+PIPOZA.WHATSAPP_NUMBER = "918670088964"; // Arjo Mondal / Studio Partner
+PIPOZA.WHATSAPP_PIUSH = "917810888147"; // Piush Mandal / Main Developer & Owner
+PIPOZA.INSTAGRAM_URL = "https://www.instagram.com/pipozadev.studio/";
 
 /* ---------------- CATEGORIES & VECTOR ICONS ---------------- */
 PIPOZA.ICONS = {
@@ -383,8 +385,9 @@ function initFloatingDock() {
   }
 
   const isSoundOn = PIPOZA.audio.enabled;
-  const currentPal = localStorage.getItem('pipoza-palette') || 'aurora';
-  
+  const savedTheme = localStorage.getItem('pipoza-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
   // Check if custom colors exist
   const savedCustom = localStorage.getItem('pipoza-custom-palette');
   let currentColors = { c1: '#00d2ff', c2: '#8a2be2', c3: '#ff007f', go: '#00f5a0' };
@@ -394,29 +397,8 @@ function initFloatingDock() {
     } catch(e) {}
   }
 
-  if (currentPal === 'custom') {
-    PIPOZA.applyCustomPalette(currentColors, false);
-  } else {
-    document.documentElement.setAttribute('data-palette', currentPal);
-  }
-
-  const swatchesHtml = PIPOZA.PALETTES.map(p => `
-    <div class="swatch pal-${p.id} ${currentPal === p.id ? 'sel' : ''}" data-pal="${p.id}" title="${p.label}">
-      <div class="dot3"></div>
-      <span>${p.label.split(' ')[0]}</span>
-    </div>`).join('');
-
   dock.innerHTML = `
-    <!-- Theme Palette Modal -->
-    <div class="theme-modal glass" id="themeModal">
-      <h4 data-i18n="studio.presets_title">${PIPOZA.t('studio.presets_title')}</h4>
-      <div class="swatch-row">${swatchesHtml}</div>
-      <button type="button" class="btn btn-primary btn-sm btn-wide" id="btnOpenColorStudio" style="margin-top:14px; font-size:12px; padding:10px;" data-i18n="studio.mix_btn">
-        ${PIPOZA.t('studio.mix_btn')}
-      </button>
-    </div>
-
-    <!-- Custom Color Studio Modal (Color Picker Mixer with Live Logo & UI Preview) -->
+    <!-- Custom Color Studio Modal (Color Picker Mixer for Project Starter) -->
     <div class="color-studio-modal glass" id="colorStudioModal">
       <div class="color-studio-header">
         <h4 data-i18n="studio.title">🎨 Custom Color Studio & Live Preview</h4>
@@ -471,17 +453,24 @@ function initFloatingDock() {
           </div>
         </div>
       </div>
-      <div class="studio-actions">
-        <div class="studio-btn-row">
-          <button type="button" class="btn btn-ghost" id="btnRandomizeColors" title="Shuffle aesthetic combinations" data-i18n="studio.shuffle">🎲 Shuffle</button>
-          <button type="button" class="btn btn-primary" id="btnSaveCustomColors" data-i18n="studio.save">Apply Theme</button>
-        </div>
-        <button type="button" class="btn btn-ghost btn-sm" id="btnResetTheme" style="font-size:11px; padding:6px;" data-i18n="studio.reset">Reset to Aurora</button>
+
+      <div class="color-studio-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="btnRandomizeColors" data-i18n="studio.shuffle">
+          🎲 Shuffle Combo
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" id="btnSaveCustomColors" data-i18n="studio.save">
+          Apply Theme
+        </button>
+        <button type="button" class="btn btn-ghost btn-sm" id="btnResetTheme" data-i18n="studio.reset">
+          Reset
+        </button>
       </div>
     </div>
 
-    <button class="dock-btn btn-theme" id="btnThemeToggle" aria-label="Change Theme" title="Theme Palette">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 8a4 4 0 0 1 4 4"/></svg>
+    <!-- Clean Dark Mode / Light Mode Single Toggle Button -->
+    <button class="dock-btn btn-theme" id="btnThemeToggle" aria-label="Toggle Dark/Light Mode" title="${savedTheme === 'light' ? 'Switch to Dark Mode (Default)' : 'Switch to Light Mode'}">
+      <svg id="icThemeSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="${savedTheme === 'light' ? 'display:none;' : ''}"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="icThemeMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="${savedTheme === 'light' ? '' : 'display:none;'}"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
 
     <button class="dock-btn" id="btnAudioToggle" aria-label="Toggle Audio SFX" title="Toggle Sound FX">
@@ -489,11 +478,15 @@ function initFloatingDock() {
       <svg id="icAudioOff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="${isSoundOn ? 'display:none;' : ''}"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
     </button>
 
-    <button class="dock-btn" id="btnEmailDock" aria-label="Email Studio" title="Email Studio">
+    <button class="dock-btn" id="btnEmailDock" aria-label="Email Studio (pipoza.dev@gmail.com)" title="Email Studio (pipoza.dev@gmail.com)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
     </button>
 
-    <a href="https://wa.me/${PIPOZA.WHATSAPP_NUMBER}" target="_blank" rel="noopener" class="dock-btn btn-wa" aria-label="WhatsApp Us" title="Chat on WhatsApp">
+    <a href="https://www.instagram.com/pipozadev.studio/" target="_blank" rel="noopener" class="dock-btn btn-ig-dock" aria-label="Instagram @pipozadev.studio" title="Follow on Instagram @pipozadev.studio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+
+    <a href="https://wa.me/${PIPOZA.WHATSAPP_PIUSH}" target="_blank" rel="noopener" class="dock-btn btn-wa" aria-label="WhatsApp Studio" title="Chat on WhatsApp (+91 78108 88147 / +91 86700 88964)">
       <span class="dock-pulse-badge"></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
     </a>
@@ -504,9 +497,7 @@ function initFloatingDock() {
   `;
 
   const btnTheme = document.getElementById('btnThemeToggle');
-  const themeModal = document.getElementById('themeModal');
   const colorStudioModal = document.getElementById('colorStudioModal');
-  const btnOpenColorStudio = document.getElementById('btnOpenColorStudio');
   const btnCloseColorStudio = document.getElementById('btnCloseColorStudio');
   const btnAudio = document.getElementById('btnAudioToggle');
   const btnEmailDock = document.getElementById('btnEmailDock');
@@ -519,25 +510,30 @@ function initFloatingDock() {
   }
 
   btnTheme.addEventListener('click', () => {
-    themeModal.classList.toggle('open');
-    colorStudioModal.classList.remove('open');
-    PIPOZA.audio.playPop(480, 0.04);
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('pipoza-theme', newTheme);
+
+    const sun = document.getElementById('icThemeSun');
+    const moon = document.getElementById('icThemeMoon');
+    if (sun && moon) {
+      sun.style.display = newTheme === 'light' ? 'none' : 'block';
+      moon.style.display = newTheme === 'light' ? 'block' : 'none';
+    }
+    btnTheme.setAttribute('title', newTheme === 'light' ? 'Switch to Dark Mode (Default)' : 'Switch to Light Mode');
+
+    PIPOZA.audio.playChime();
+    PIPOZA.showToast(newTheme === 'light' ? '☀️ Luminous Light Mode' : '🌙 Dark Mode (Default)');
   });
 
   PIPOZA.openColorStudio = function() {
-    if (themeModal) themeModal.classList.remove('open');
     if (colorStudioModal) {
       colorStudioModal.classList.add('open');
       if (typeof updateLiveCustom === 'function') updateLiveCustom();
       PIPOZA.audio.playChime();
     }
   };
-
-  if (btnOpenColorStudio) {
-    btnOpenColorStudio.addEventListener('click', () => {
-      PIPOZA.openColorStudio();
-    });
-  }
 
   if (btnCloseColorStudio) {
     btnCloseColorStudio.addEventListener('click', () => {
@@ -547,22 +543,8 @@ function initFloatingDock() {
 
   document.addEventListener('click', e => {
     if (!dock.contains(e.target) && !e.target.closest('#btnLaunchCustomStudioInWizard')) {
-      themeModal.classList.remove('open');
       colorStudioModal.classList.remove('open');
     }
-  });
-
-  // Preset swatch handlers
-  themeModal.querySelectorAll('.swatch').forEach(sw => {
-    sw.addEventListener('click', () => {
-      const pal = sw.dataset.pal;
-      document.documentElement.setAttribute('data-palette', pal);
-      localStorage.setItem('pipoza-palette', pal);
-      themeModal.querySelectorAll('.swatch').forEach(s => s.classList.remove('sel'));
-      sw.classList.add('sel');
-      PIPOZA.audio.playChime();
-      PIPOZA.showToast(`Switched to ${sw.getAttribute('title')}`);
-    });
   });
 
   // Custom Color Studio Controls
@@ -639,11 +621,23 @@ function initFloatingDock() {
   });
 
   document.getElementById('btnResetTheme').addEventListener('click', () => {
-    document.documentElement.setAttribute('data-palette', 'aurora');
-    localStorage.setItem('pipoza-palette', 'aurora');
+    localStorage.removeItem('pipoza-custom-palette');
+    localStorage.removeItem('pipoza-palette');
+    const root = document.documentElement;
+    root.style.removeProperty('--c1');
+    root.style.removeProperty('--c2');
+    root.style.removeProperty('--c3');
+    root.style.removeProperty('--go');
+    root.style.removeProperty('--grad-brand');
+    root.style.removeProperty('--grad-glow');
+    root.style.removeProperty('--grad-brand-soft');
+    root.style.removeProperty('--shadow-glow');
+    root.style.removeProperty('--shadow-btn');
+    root.removeAttribute('data-palette');
     colorStudioModal.classList.remove('open');
     PIPOZA.audio.playChime();
-    PIPOZA.showToast('Reset to Aurora theme');
+    PIPOZA.showToast('Reset to default theme');
+    window.dispatchEvent(new CustomEvent('pipoza-custom-palette-updated', { detail: { c1: '#00d2ff', c2: '#8a2be2', c3: '#ff007f', go: '#00f5a0' } }));
   });
 
   btnAudio.addEventListener('click', () => {
@@ -1419,6 +1413,194 @@ function wireDirectLinks() {
   document.querySelectorAll('[data-wa-link]').forEach(a => a.href = `https://wa.me/${PIPOZA.WHATSAPP_NUMBER}`);
 }
 
+/* ---------------- PIUSH MANDAL CRIMSON PARTICLE & CURVE ENGINE ---------------- */
+function initPiushRedCanvas() {
+  const canvas = document.getElementById('piushRedCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let nodes = [];
+  let tick = 0;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    w = Math.max(rect.width, 300);
+    h = Math.max(rect.height, 600);
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const count = 26;
+    nodes = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.65,
+      vy: -0.25 - Math.random() * 0.55,
+      r: 1.6 + Math.random() * 2.6,
+      hue: Math.random() > 0.35 ? '#ff003c' : '#ff4d00',
+      alpha: 0.45 + Math.random() * 0.5
+    }));
+  }
+
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  function render() {
+    tick += 0.022;
+    ctx.clearRect(0, 0, w, h);
+
+    // Draw dynamic glowing sine energy wave curves
+    for (let wave = 0; wave < 2; wave++) {
+      ctx.beginPath();
+      const baseY = wave === 0 ? h * 0.28 : h * 0.74;
+      for (let x = 0; x <= w; x += 12) {
+        const y = baseY + Math.sin(x * 0.015 + tick + wave * 2) * 26 + Math.cos(x * 0.008 - tick) * 14;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = wave === 0 ? 'rgba(255, 0, 60, 0.28)' : 'rgba(255, 77, 0, 0.22)';
+      ctx.lineWidth = 1.8;
+      ctx.stroke();
+    }
+
+    // Update & draw crimson particles + constellation links
+    for (let i = 0; i < nodes.length; i++) {
+      const p = nodes[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = w;
+      if (p.x > w) p.x = 0;
+      if (p.y < -10) {
+        p.y = h + 10;
+        p.x = Math.random() * w;
+      }
+
+      // Connect nearby crimson nodes
+      for (let j = i + 1; j < nodes.length; j++) {
+        const q = nodes[j];
+        const dx = p.x - q.x;
+        const dy = p.y - q.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 115) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(255, 20, 65, ${(1 - dist / 115) * 0.32})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+
+      // Draw glowing red particle core
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.hue;
+      ctx.shadowColor = '#ff003c';
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}
+
+/* ---------------- ARJO MONDAL CYBER-BLUE PARTICLE & CURVE ENGINE ---------------- */
+function initArjoBlueCanvas() {
+  const canvas = document.getElementById('arjoBlueCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let nodes = [];
+  let tick = 0;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    w = Math.max(rect.width, 300);
+    h = Math.max(rect.height, 600);
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const count = 22;
+    nodes = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.55,
+      vy: -0.22 - Math.random() * 0.48,
+      r: 1.5 + Math.random() * 2.4,
+      hue: Math.random() > 0.35 ? '#00d2ff' : '#3b82f6',
+      alpha: 0.45 + Math.random() * 0.5
+    }));
+  }
+
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  function render() {
+    tick += 0.02;
+    ctx.clearRect(0, 0, w, h);
+
+    // Draw dynamic glowing sapphire-cyan sine wave curves
+    for (let wave = 0; wave < 2; wave++) {
+      ctx.beginPath();
+      const baseY = wave === 0 ? h * 0.32 : h * 0.72;
+      for (let x = 0; x <= w; x += 12) {
+        const y = baseY + Math.cos(x * 0.014 + tick + wave * 1.8) * 24 + Math.sin(x * 0.009 - tick) * 13;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = wave === 0 ? 'rgba(0, 210, 255, 0.26)' : 'rgba(59, 130, 246, 0.22)';
+      ctx.lineWidth = 1.7;
+      ctx.stroke();
+    }
+
+    // Update & draw cyber-blue particles + constellation links
+    for (let i = 0; i < nodes.length; i++) {
+      const p = nodes[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = w;
+      if (p.x > w) p.x = 0;
+      if (p.y < -10) {
+        p.y = h + 10;
+        p.x = Math.random() * w;
+      }
+
+      // Connect nearby sapphire nodes
+      for (let j = i + 1; j < nodes.length; j++) {
+        const q = nodes[j];
+        const dx = p.x - q.x;
+        const dy = p.y - q.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 110) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(0, 210, 255, ${(1 - dist / 110) * 0.3})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+
+      // Draw glowing sapphire particle core
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.hue;
+      ctx.shadowColor = '#00d2ff';
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}
+
 /* ---------------- INJECT SVG GRADIENT DEFS ---------------- */
 document.addEventListener('DOMContentLoaded', () => {
   document.body.insertAdjacentHTML('afterbegin', `
@@ -1438,6 +1620,8 @@ document.addEventListener('DOMContentLoaded', () => {
   `);
 
   initCanvasParticles();
+  initPiushRedCanvas();
+  initArjoBlueCanvas();
   initTiltCards();
   initMagneticButtons();
   initCustomCursor();
