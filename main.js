@@ -12,6 +12,7 @@ PIPOZA.INSTAGRAM_URL = "https://www.instagram.com/pipozadev.studio/";
 
 /* ---------------- CATEGORIES & VECTOR ICONS ---------------- */
 PIPOZA.ICONS = {
+  android: '<rect x="6" y="2.5" width="12" height="19" rx="2.5" stroke="url(#g1)" stroke-width="1.8"/><path d="M10 18.5h4M9 5.5h6" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>',
   tech: '<path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/><rect x="6" y="6" width="12" height="12" rx="2.5" stroke="url(#g1)" stroke-width="1.8"/><rect x="9.5" y="9.5" width="5" height="5" rx="1" stroke="url(#g1)" stroke-width="1.8"/>',
   medical: '<path d="M12 21s-7.5-4.6-9.7-9.1C.7 8.3 2.4 4.9 5.8 4.2c2-.4 3.9.5 5 2.1C11.9 4.7 13.8 3.8 15.8 4.2c3.4.7 5.1 4.1 3.5 7.7C17.1 16.4 12 21 12 21z" stroke="url(#g1)" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 12h2.2l1.3-2.6L13 15l1.3-3H16" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
   gaming: '<rect x="2.5" y="8" width="19" height="9" rx="4.2" stroke="url(#g1)" stroke-width="1.8"/><path d="M7 10.5v4M5 12.5h4" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="11" r="1.2" fill="url(#g1)"/><circle cx="18.4" cy="13.4" r="1.2" fill="url(#g1)"/>',
@@ -20,12 +21,20 @@ PIPOZA.ICONS = {
   portfolio: '<circle cx="12" cy="8.4" r="3.6" stroke="url(#g1)" stroke-width="1.8"/><path d="M4.5 20c1.2-4 4-6 7.5-6s6.3 2 7.5 6" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>',
   food: '<path d="M6 2.5v7a2.5 2.5 0 0 0 5 0v-7M8.5 9.5V21.5" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/><path d="M16.5 2.5c-1.5 0-2.5 1.8-2.5 4.5s1 4.5 2.5 4.5v10" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
   realestate: '<path d="M3 11 12 3l9 8" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 10v10h13V10" stroke="url(#g1)" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 20v-5.5h4V20" stroke="url(#g1)" stroke-width="1.8"/>',
+  edu: '<path d="M2 9.5 12 4l10 5.5-10 5.5Z" stroke="url(#g1)" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 12v5.5c0 1.8 2.7 3 6 3s6-1.2 6-3V12" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>',
+  fintech: '<rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="url(#g1)" stroke-width="1.8"/><path d="M2.5 10h19M7 15h4" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>',
+  delivery: '<rect x="2.5" y="7" width="12" height="10" rx="1.5" stroke="url(#g1)" stroke-width="1.8"/><path d="M14.5 10h3.5l3 3.5V17h-6.5V10Z" stroke="url(#g1)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="url(#g1)" stroke-width="1.8"/><circle cx="17.5" cy="18" r="2" stroke="url(#g1)" stroke-width="1.8"/>',
+  hotel: '<path d="M3 20V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12M3 15h18M7 11h3M14 11h3" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+  salon: '<circle cx="6.5" cy="6.5" r="2.5" stroke="url(#g1)" stroke-width="1.8"/><circle cx="6.5" cy="17.5" r="2.5" stroke="url(#g1)" stroke-width="1.8"/><path d="M8.5 8.5 19 19M8.5 15.5 19 5" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>',
+  events: '<rect x="3" y="5" width="18" height="15" rx="2" stroke="url(#g1)" stroke-width="1.8"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+  logistics: '<path d="M12 2 3 6.5v11L12 22l9-4.5v-11L12 2Z" stroke="url(#g1)" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 6.5 12 11l9-4.5M12 11v11" stroke="url(#g1)" stroke-width="1.8" stroke-linejoin="round"/>',
   other: '<path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="url(#g1)" stroke-width="1.8"/>'
 };
 PIPOZA.ICONS.restaurant = PIPOZA.ICONS.food;
 PIPOZA.ICONS.fitness = PIPOZA.ICONS.biz;
 
 PIPOZA.CATEGORIES = [
+  { id:'android', labelKey:'cat.android.label', descKey:'cat.android.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
   { id:'tech', labelKey:'cat.tech.label', descKey:'cat.tech.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
   { id:'medical', labelKey:'cat.medical.label', descKey:'cat.medical.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
   { id:'gaming', labelKey:'cat.gaming.label', descKey:'cat.gaming.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
@@ -34,6 +43,13 @@ PIPOZA.CATEGORIES = [
   { id:'fitness', labelKey:'cat.fitness.label', descKey:'cat.fitness.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
   { id:'portfolio', labelKey:'cat.portfolio.label', descKey:'cat.portfolio.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
   { id:'realestate', labelKey:'cat.realestate.label', descKey:'cat.realestate.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'edu', labelKey:'cat.edu.label', descKey:'cat.edu.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'fintech', labelKey:'cat.fintech.label', descKey:'cat.fintech.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'delivery', labelKey:'cat.delivery.label', descKey:'cat.delivery.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'hotel', labelKey:'cat.hotel.label', descKey:'cat.hotel.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'salon', labelKey:'cat.salon.label', descKey:'cat.salon.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'events', labelKey:'cat.events.label', descKey:'cat.events.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
+  { id:'logistics', labelKey:'cat.logistics.label', descKey:'cat.logistics.desc', get label(){ return PIPOZA.t(this.labelKey); }, get desc(){ return PIPOZA.t(this.descKey); } },
 ];
 
 PIPOZA.PALETTES = [
@@ -319,59 +335,10 @@ function initMagneticButtons() {
   });
 }
 
-/* ---------------- CUSTOM CYBER CURSOR (STRICTLY DISABLED ON TOUCH) ---------------- */
+/* ---------------- CLEAN NORMAL CURSOR ---------------- */
 function initCustomCursor() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
-
-  let cursorDot = document.querySelector('.custom-cursor');
-  let cursorFollower = document.querySelector('.cursor-follower');
-
-  if (!cursorDot) {
-    cursorDot = document.createElement('div');
-    cursorDot.className = 'custom-cursor';
-    document.body.appendChild(cursorDot);
-  }
-  if (!cursorFollower) {
-    cursorFollower = document.createElement('div');
-    cursorFollower.className = 'cursor-follower';
-    document.body.appendChild(cursorFollower);
-  }
-
-  let mouseX = -100, mouseY = -100;
-  let followerX = -100, followerY = -100;
-
-  window.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-  }, { passive: true });
-
-  function updateFollower() {
-    followerX += (mouseX - followerX) * 0.65;
-    followerY += (mouseY - followerY) * 0.65;
-    cursorFollower.style.left = `${followerX}px`;
-    cursorFollower.style.top = `${followerY}px`;
-    requestAnimationFrame(updateFollower);
-  }
-  updateFollower();
-
-  const interactiveTargets = 'a, button, .tilt-card, .type-opt, .chip-opt, .budget-opt, .swatch, input, textarea, select, .vp-btn, .showcase-tab';
-  document.addEventListener('mouseover', e => {
-    if (e.target.closest(interactiveTargets)) {
-      cursorFollower.classList.add('hovering');
-    }
-  });
-
-  document.addEventListener('mouseout', e => {
-    if (e.target.closest(interactiveTargets)) {
-      cursorFollower.classList.remove('hovering');
-    }
-  });
-
-  document.addEventListener('mousedown', () => cursorFollower.classList.add('clicking'));
-  document.addEventListener('mouseup', () => cursorFollower.classList.remove('clicking'));
+  const existingFlame = document.getElementById('blueFlameCursor');
+  if (existingFlame) existingFlame.remove();
 }
 
 /* ---------------- FLOATING DOCK & THEME CONTROLS ---------------- */
@@ -387,35 +354,63 @@ function initFloatingDock() {
   const isSoundOn = PIPOZA.audio.enabled;
   const savedTheme = localStorage.getItem('pipoza-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
+  document.documentElement.removeAttribute('data-vfx');
+
+  // One-time reset of any stale red/custom palette so the theme matches the clean original Aurora Cyan look
+  if (!localStorage.getItem('pipoza-theme-reset-v4')) {
+    localStorage.removeItem('pipoza-custom-palette');
+    localStorage.removeItem('pipoza-palette');
+    localStorage.setItem('pipoza-theme-reset-v4', '1');
+  }
 
   // Check if custom colors exist
   const savedCustom = localStorage.getItem('pipoza-custom-palette');
-  let currentColors = { c1: '#00d2ff', c2: '#8a2be2', c3: '#ff007f', go: '#00f5a0' };
+  let currentColors = { c1: '#00d2ff', c2: '#8a2be2', c3: '#3b82f6', go: '#00f5a0' };
   if (savedCustom) {
     try {
       currentColors = JSON.parse(savedCustom);
+      PIPOZA.applyCustomPalette(currentColors, false);
     } catch(e) {}
+  } else {
+    const savedPalette = localStorage.getItem('pipoza-palette');
+    if (savedPalette && savedPalette !== 'aurora') {
+      document.documentElement.setAttribute('data-palette', savedPalette);
+    }
   }
 
   dock.innerHTML = `
-    <!-- Custom Color Studio Modal (Color Picker Mixer for Project Starter) -->
-    <div class="color-studio-modal glass" id="colorStudioModal">
-      <div class="color-studio-header">
-        <h4 data-i18n="studio.title">🎨 Custom Color Studio & Live Preview</h4>
-        <button type="button" class="color-studio-close" id="btnCloseColorStudio" aria-label="Close Studio">&times;</button>
+    <!-- Custom Color Studio Modal -->
+    <div class="color-studio-modal glass" id="colorStudioModal" aria-hidden="true">
+      <div class="color-studio-head">
+        <span data-i18n="studio.title">🎨 Custom Color Studio & Live Preview</span>
+        <button type="button" class="color-studio-close" id="btnCloseColorStudio">✕</button>
       </div>
 
-      <!-- Live Interactive Component Preview (Logo, Glow, Card & Button) -->
-      <div class="studio-live-stage" id="studioLiveStage">
-        <div class="studio-preview-card glass">
-          <div class="studio-logo-glow" id="studioLogoGlow">
-            <img src="PipoZa_Logo.png" alt="PipoZa Live Logo">
-          </div>
-          <div class="studio-sample-content">
-            <span class="studio-badge"><span class="studio-badge-dot"></span> Live Theme Preview</span>
-            <div class="studio-sample-title">Bespoke <span class="g">Cyber Luxe</span></div>
-            <div class="studio-sample-btn-wrap">
-              <button type="button" class="btn btn-primary btn-sm studio-sample-btn" id="studioSampleBtn">Start Project →</button>
+      <!-- Preset Quick Pills -->
+      <div class="color-presets-section">
+        <div class="color-presets-title" data-i18n="studio.presets_title">Preset Color Palettes</div>
+        <div class="color-presets-row">
+          ${PIPOZA.PALETTES.map(p => `
+            <button type="button" class="preset-pill" data-p="${p.id}">
+              <span class="swatch-dot" style="background:${p.color};"></span>
+              <span>${p.label}</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Interactive Live Sample Card Inside Studio -->
+      <div class="studio-live-sample" id="studioLiveSample">
+        <div class="studio-sample-header">
+          <span class="studio-sample-kicker">LIVE PREVIEW</span>
+          <span class="studio-sample-badge" id="studioSampleBadge">● Active Theme</span>
+        </div>
+        <div class="studio-sample-body">
+          <div class="studio-preview-card">
+            <h5 id="studioSampleTitle">Your Brand Experience</h5>
+            <p>Instant preview of how buttons, borders, and neon accents adapt across your site.</p>
+            <div class="studio-sample-btns">
+              <button type="button" class="btn btn-primary btn-sm studio-sample-btn" id="studioSampleBtn">Direct Contact →</button>
             </div>
           </div>
         </div>
@@ -637,7 +632,7 @@ function initFloatingDock() {
     colorStudioModal.classList.remove('open');
     PIPOZA.audio.playChime();
     PIPOZA.showToast('Reset to default theme');
-    window.dispatchEvent(new CustomEvent('pipoza-custom-palette-updated', { detail: { c1: '#00d2ff', c2: '#8a2be2', c3: '#ff007f', go: '#00f5a0' } }));
+    window.dispatchEvent(new CustomEvent('pipoza-custom-palette-updated', { detail: { c1: '#00d2ff', c2: '#8a2be2', c3: '#3b82f6', go: '#00f5a0' } }));
   });
 
   btnAudio.addEventListener('click', () => {
@@ -808,8 +803,8 @@ function initShowcaseMockup() {
             ${currentProject.feats.map(f => `<span style="font-size:12px; color:var(--text); background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:5px 12px; border-radius:99px;">${f}</span>`).join('')}
           </div>
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <button type="button" class="btn btn-primary btn-sm" style="opacity:0.6; pointer-events:none; cursor:not-allowed;" title="Demo preview only — external navigation disabled" data-i18n="showcase.demo_btn">${PIPOZA.t('showcase.demo_btn')}</button>
-            <a href="start" class="btn btn-ghost btn-sm" data-i18n="showcase.build_btn">${PIPOZA.t('showcase.build_btn')}</a>
+            <a href="contact" class="btn btn-primary btn-sm" data-i18n="showcase.build_btn">${PIPOZA.t('showcase.build_btn')}</a>
+            <a href="https://wa.me/917810888147" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" data-wa-link data-i18n="cta.or_chat">${PIPOZA.t('cta.or_chat')}</a>
           </div>
         </div>
       </div>
@@ -960,7 +955,7 @@ function initCostEstimator() {
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Direct Call & Chat Developer Support</span>
             </div>
 
-            <a href="start" class="btn btn-primary btn-wide">Lock in This Price →</a>
+            <a href="contact" class="btn btn-primary btn-wide">Direct Contact to Lock Price →</a>
           </div>
         </div>
       </div>
@@ -1181,7 +1176,7 @@ function initMobileNav() {
 
   // Ensure menu closes if viewport expands to desktop
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 940 && panel.classList.contains('open')) {
+    if (window.innerWidth > 1080 && panel.classList.contains('open')) {
       setOpen(false);
     }
   }, { passive: true });

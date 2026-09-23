@@ -32,7 +32,7 @@
   /* ---- Dynamic Theme Palette 1: Aurora (Default) ---- */
   --c1: #00d2ff;   /* Cyber Cyan */
   --c2: #8a2be2;   /* Royal Purple */
-  --c3: #ff007f;   /* Neon Magenta */
+  --c3: #3b82f6;   /* Electric Sapphire Blue */
   --go: #00f5a0;   /* Radiant Emerald / Action CTA */
 
   --grad-brand: linear-gradient(135deg, var(--c1) 0%, var(--c2) 50%, var(--c3) 100%);
@@ -321,55 +321,12 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* =========================================================
-   CUSTOM CYBER CURSOR & SPOTLIGHT
+   CLEAN NORMAL CURSOR
    ========================================================= */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--go);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 12px var(--go), 0 0 20px var(--go);
-  transition: opacity 0.3s ease, transform 0.08s ease-out;
-  display: none;
-}
-
-.cursor-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid color-mix(in srgb, var(--c1) 70%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.25s var(--ease-spring), height 0.25s var(--ease-spring), border-color 0.25s ease, background 0.25s ease;
-  display: none;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .custom-cursor, .cursor-follower {
-    display: block;
-  }
-}
-
-.cursor-follower.hovering {
-  width: 58px;
-  height: 58px;
-  border-color: var(--go);
-  background: color-mix(in srgb, var(--go) 12%, transparent);
-  box-shadow: 0 0 20px color-mix(in srgb, var(--go) 25%, transparent);
-}
-
-.cursor-follower.clicking {
-  transform: translate(-50%, -50%) scale(0.85);
+.custom-cursor,
+.cursor-follower,
+.blue-flame-cursor {
+  display: none !important;
 }
 
 /* =========================================================
@@ -454,22 +411,26 @@ nav.wrap {
   justify-content: space-between;
   height: 80px;
   position: relative;
+  gap: 12px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 19.5px;
   letter-spacing: -0.01em;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .brand-logo-wrap {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
 }
 
 .brand-logo-wrap img {
@@ -487,37 +448,44 @@ nav.wrap {
 .brand span {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 .brand small {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 10.5px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-dim);
   margin-top: 1px;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
-  padding: 5px 8px;
+  padding: 4px 6px;
   border-radius: var(--radius-pill);
   backdrop-filter: blur(16px);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .nav-links a {
-  font-size: 14.5px;
+  font-size: 13.8px;
   font-weight: 500;
   color: var(--text-dim);
-  padding: 8px 16px;
+  padding: 7px 14px;
   border-radius: var(--radius-pill);
   transition: all 0.2s ease;
   position: relative;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-links a:hover {
@@ -536,7 +504,9 @@ nav.wrap {
 .nav-cta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .menu-btn {
@@ -570,7 +540,18 @@ nav.wrap {
   transition: transform 0.28s var(--ease-spring), color 0.2s;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1240px) {
+  .nav-links a {
+    padding: 6px 11px;
+    font-size: 13px;
+  }
+  .nav-cta .btn-sm {
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 1080px) {
   .nav-links {
     display: none;
   }
@@ -756,12 +737,15 @@ nav.wrap {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 36px;
   align-items: center;
   min-width: 0;
-  max-width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
   width: 100%;
+  padding-left: clamp(22px, 4vw, 48px);
+  padding-right: clamp(22px, 4vw, 48px);
 }
 
 .hero-grid > div:first-child {
@@ -922,7 +906,11 @@ nav.wrap {
 /* Hero Holographic Visual */
 .hero-visual {
   position: relative;
-  height: 480px;
+  height: 460px;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  justify-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -963,8 +951,8 @@ nav.wrap {
 }
 
 .f-tag.t1 { top: 8%; left: 0%; animation-delay: 0s; }
-.f-tag.t2 { top: 16%; right: -2%; animation-delay: 1.2s; }
-.f-tag.t3 { bottom: 18%; left: -4%; animation-delay: 2.1s; }
+.f-tag.t2 { top: 16%; right: 2%; animation-delay: 1.2s; }
+.f-tag.t3 { bottom: 18%; left: -2%; animation-delay: 2.1s; }
 .f-tag.t4 { bottom: 4%; right: 4%; animation-delay: 0.8s; }
 
 @keyframes floatBob {
@@ -6242,6 +6230,330 @@ html[data-theme="light"] .founder-card.founder-arjo-blue .btn-arjo-outline:hover
     justify-content: center;
   }
 }
+
+/* =========================================================
+   PERSONALISED ANDROID APPLICATION ENGINEERING SHOWCASE
+   ========================================================= */
+.android-flagship-wrap {
+  position: relative;
+  border-radius: 28px;
+  padding: 54px 44px;
+  background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.16) 0%, rgba(6, 182, 212, 0.1) 40%, rgba(10, 15, 30, 0.94) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.38);
+  box-shadow: 0 28px 70px -18px rgba(0, 0, 0, 0.7), 0 0 40px rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+
+html[data-theme="light"] .android-flagship-wrap {
+  background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.08) 45%, rgba(241, 245, 249, 0.96) 100%);
+  border-color: rgba(16, 185, 129, 0.45);
+  box-shadow: 0 24px 60px -16px rgba(15, 23, 42, 0.12), 0 0 32px rgba(16, 185, 129, 0.1);
+}
+
+.android-hero-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.android-kicker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.42);
+  margin-bottom: 18px;
+}
+
+html[data-theme="light"] .android-kicker-pill {
+  color: #047857;
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(5, 150, 105, 0.4);
+}
+
+.android-title {
+  font-size: clamp(28px, 3.8vw, 44px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.android-lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+}
+
+.android-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.android-spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+html[data-theme="light"] .android-spec-pill {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+/* Android Phone Simulator Visual */
+.android-phone-mockup {
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 34px;
+  padding: 14px;
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border: 2px solid rgba(16, 185, 129, 0.55);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 35px rgba(16, 185, 129, 0.25);
+  position: relative;
+}
+
+.android-phone-screen {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #06131f 0%, #091e2c 100%);
+  padding: 20px 18px;
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.android-notch {
+  width: 84px;
+  height: 18px;
+  background: #020617;
+  border-radius: 99px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.android-notch span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.android-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.android-app-chip {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.android-app-card-ui {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.android-play-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(6, 182, 212, 0.22));
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.android-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.android-pillar-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+html[data-theme="light"] .android-pillar-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(15, 23, 42, 0.11);
+}
+
+.android-pillar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 185, 129, 0.55);
+  box-shadow: 0 16px 36px -10px rgba(16, 185, 129, 0.2);
+}
+
+.android-pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+}
+
+.android-pillar-card h3 {
+  font-size: 17.5px;
+  margin-bottom: 8px;
+}
+
+.android-pillar-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* =========================================================
+   TERMS & CONDITIONS / STUDIO POLICIES SECTION
+   ========================================================= */
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.term-card {
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.term-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--c1);
+}
+
+.term-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 11px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(56, 189, 248, 0.14);
+  color: var(--c1);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  margin-bottom: 12px;
+}
+
+.term-card h3 {
+  font-size: 18.5px;
+  margin-bottom: 10px;
+}
+
+.term-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* =========================================================
+   404 CYBER ERROR PAGE
+   ========================================================= */
+.err404-section {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 0 80px;
+  text-align: center;
+}
+
+.err404-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 44px;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.err404-code {
+  font-size: clamp(78px, 14vw, 138px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--go) 0%, var(--c1) 50%, var(--c2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 12px 30px rgba(56, 189, 248, 0.25));
+}
+
+@media (max-width: 960px) {
+  .android-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .android-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .android-flagship-wrap {
+    padding: 32px 20px;
+  }
+  .android-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .err404-card {
+    padding: 40px 22px;
+  }
+}
+
 
 
 

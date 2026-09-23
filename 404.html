@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>404 — Page Not Found | PipoZa Dev Web & Android App Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="404 Page Not Found — Return to PipoZa Dev for bespoke websites and high-quality personalised Android applications.">
+<link rel="icon" href="PipoZa_Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cyber-grid"></div>
+<div class="ambient">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="blob blob-d"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index" class="brand">
+      <div class="brand-logo-wrap"><img src="PipoZa_Logo.png" alt="PipoZa Dev Logo"></div>
+      <span>PipoZa Dev<small data-i18n="nav.brand_sub">Web & Android App Studio</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index" data-nav="index" data-i18n="nav.home">Home</a>
+      <a href="services" data-nav="services" data-i18n="nav.build">What We Build</a>
+      <a href="work" data-nav="work" data-i18n="nav.work">Our Work</a>
+      <a href="about" data-nav="about" data-i18n="nav.about">About Studio</a>
+      <a href="terms" data-nav="terms" data-i18n="nav.terms">Terms</a>
+      <a href="contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switcher"></div>
+      <a href="contact" class="btn btn-primary btn-sm" data-i18n="nav.start">Direct Contact →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="lang-switcher mobile-lang-wrap"></div>
+  <a href="index" class="m-link" data-nav="index"><span data-i18n="nav.home">Home</span> <span>→</span></a>
+  <a href="services" class="m-link" data-nav="services"><span data-i18n="nav.build">What We Build</span> <span>→</span></a>
+  <a href="work" class="m-link" data-nav="work"><span data-i18n="nav.work">Our Work</span> <span>→</span></a>
+  <a href="about" class="m-link" data-nav="about"><span data-i18n="nav.about">About Studio</span> <span>→</span></a>
+  <a href="terms" class="m-link" data-nav="terms"><span>Terms & Conditions</span> <span>→</span></a>
+  <a href="contact" class="m-link" data-nav="contact"><span data-i18n="nav.contact">Contact</span> <span>→</span></a>
+  <div class="mn-cta">
+    <a href="contact" class="btn btn-primary btn-wide" data-i18n="cta.start_now">Direct Contact Hub →</a>
+    <a href="https://wa.me/917810888147" target="_blank" rel="noopener" class="btn btn-ghost btn-wide" data-wa-link data-i18n="cta.or_chat">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<main>
+  <section class="err404-section">
+    <div class="wrap">
+      <div class="err404-card glass reveal tilt-card">
+        <div class="eyebrow-badge" style="margin:0 auto 18px;">
+          <span class="dot" style="background:#ff334b;"></span>
+          <span>HTTP 404 · COORDINATES NOT FOUND</span>
+        </div>
+
+        <div class="err404-code">404</div>
+
+        <h1 style="font-size:clamp(26px, 4vw, 40px); margin-bottom:14px;">
+          Looks like this route drifted into <span class="g">deep space</span>.
+        </h1>
+
+        <p style="color:var(--text-dim); max-width:560px; margin:0 auto 30px; font-size:16px; line-height:1.7;">
+          The page you are looking for doesn’t exist or has been relocated. Explore our bespoke <strong>4–5 Day Websites</strong>, our high-quality <strong>1–2 Week Personalised Android Applications</strong>, or connect directly with our lead engineers below.
+        </p>
+
+        <div class="hero-actions" style="justify-content:center; margin-bottom:32px;">
+          <a href="index" class="btn btn-primary">← Back to Home</a>
+          <a href="services" class="btn btn-grad">Websites & Android Apps ↗</a>
+          <a href="contact" class="btn btn-ghost">Direct Contact Hub</a>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:14px; text-align:left; border-top:1px solid var(--border); padding-top:26px;">
+          <a href="services#androidApps" class="glass" style="padding:16px; border-radius:16px; text-decoration:none; color:var(--text); border:1px solid var(--border);">
+            <strong style="display:block; color:#10b981; margin-bottom:4px;">📱 Android Apps (1–2 Wks)</strong>
+            <span style="font-size:13px; color:var(--text-dim);">High-quality APK & Google Play Store publishing</span>
+          </a>
+          <a href="terms" class="glass" style="padding:16px; border-radius:16px; text-decoration:none; color:var(--text); border:1px solid var(--border);">
+            <strong style="display:block; color:var(--c1); margin-bottom:4px;">📜 Terms & Conditions</strong>
+            <span style="font-size:13px; color:var(--text-dim);">Read our Web & Android App studio policies</span>
+          </a>
+          <a href="https://wa.me/917810888147" target="_blank" rel="noopener" class="glass" style="padding:16px; border-radius:16px; text-decoration:none; color:var(--text); border:1px solid var(--border);">
+            <strong style="display:block; color:var(--go); margin-bottom:4px;">💬 Instant WhatsApp Support</strong>
+            <span style="font-size:13px; color:var(--text-dim);">Piush: +91 78108 88147 · Arya: +91 86700 88964</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="PipoZa_Logo.png" alt="PipoZa Dev"> PipoZa Dev</div>
+        <p class="desc" data-i18n="foot.desc">A boutique digital studio engineering custom websites (4–5 days) and high-quality personalised Android applications (1–2 weeks). Zero advance payment required.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.explore_title">Studio</h4>
+        <div class="flinks">
+          <a href="services" data-i18n="foot.services">Websites & Android Apps</a>
+          <a href="work" data-i18n="foot.work">Our Work & Case Studies</a>
+          <a href="about" data-i18n="foot.about">About Studio</a>
+          <a href="terms">Terms & Conditions</a>
+          <a href="contact" data-i18n="foot.contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect_title">Connect</h4>
+        <div class="flinks">
+          <a href="contact" data-i18n="foot.start">Direct Contact Hub</a>
+          <a href="mailto:pipoza.dev@gmail.com" data-email-link data-i18n="foot.email_link">Email: pipoza.dev@gmail.com</a>
+          <a href="https://wa.me/917810888147" target="_blank" rel="noopener" data-wa-link data-i18n="foot.wa_link">WhatsApp: +91 78108 88147</a>
+          <a href="https://www.instagram.com/pipozadev.studio/" target="_blank" rel="noopener" data-ig-link data-i18n="foot.ig_link">Instagram: @pipozadev.studio</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 PipoZa Dev. All rights reserved.</span>
+      <span class="made"><span class="dot"></span> <span data-i18n="foot.made">Designed & Engineered by PipoZa Dev</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
