@@ -1,5 +1,5 @@
 /* =========================================================
-   PipoZa Dev — Supercharged 5-Step Project Wizard
+   PipoZa — Supercharged 5-Step Project Wizard
    Quick presets, live scope calculations & canvas confetti
    Full Multi-Language Support (English, Hindi, Bengali)
    Outbound inquiry messages remain strictly in English!
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function buildMessage(d) {
     return [
-      '🚀 NEW PROJECT INQUIRY — PipoZa Dev',
+      '🚀 NEW PROJECT INQUIRY — PipoZa',
       '====================================',
       `Category: ${d.type}`,
       `Business: ${d.bizName}`,

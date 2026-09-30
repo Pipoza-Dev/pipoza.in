@@ -1,5 +1,5 @@
 /* =========================================================
-   PipoZa Dev — Core Interactive Engine (Mobile + PC Optimized)
+   PipoZa — Core Interactive Engine (Mobile + PC Optimized)
    Canvas particles, 3D tilts, magnetic physics, audio synth,
    Custom Color Studio, currency switcher, showcase & estimator
    ========================================================= */
@@ -500,7 +500,7 @@ function initFloatingDock() {
 
   if (btnEmailDock) {
     btnEmailDock.addEventListener('click', () => {
-      PIPOZA.openEmailModal('Website Project Inquiry — PipoZa Dev', 'Hi PipoZa Dev,\n\nI would like to discuss building a custom website with your studio.\n\nLooking forward to your response!');
+      PIPOZA.openEmailModal('Website Project Inquiry — PipoZa', 'Hi PipoZa,\n\nI would like to discuss building a custom website with your studio.\n\nLooking forward to your response!');
     });
   }
 
@@ -1270,7 +1270,7 @@ function markActiveNav() {
 }
 
 /* ---------------- SMART EMAIL MODAL (100% RELIABLE EMAIL LAUNCHER) ---------------- */
-PIPOZA.openEmailModal = function(subject = 'Website Project Inquiry — PipoZa Dev', body = '') {
+PIPOZA.openEmailModal = function(subject = 'Website Project Inquiry — PipoZa', body = '') {
   let modal = document.getElementById('emailModal');
   if (!modal) {
     modal = document.createElement('div');
@@ -1402,7 +1402,7 @@ function wireDirectLinks() {
     a.href = `mailto:${PIPOZA.CONTACT_EMAIL}`;
     a.addEventListener('click', e => {
       e.preventDefault();
-      PIPOZA.openEmailModal('Website Project Inquiry — PipoZa Dev', 'Hi PipoZa Dev,\n\nI would like to discuss building a custom website with your studio.\n\nLooking forward to your response!');
+      PIPOZA.openEmailModal('Website Project Inquiry — PipoZa', 'Hi PipoZa,\n\nI would like to discuss building a custom website with your studio.\n\nLooking forward to your response!');
     });
   });
   document.querySelectorAll('[data-wa-link]').forEach(a => a.href = `https://wa.me/${PIPOZA.WHATSAPP_NUMBER}`);

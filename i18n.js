@@ -1,5 +1,5 @@
 /* =========================================================
-   PipoZa Dev — Master Internationalization (i18n) Engine
+   PipoZa — Master Internationalization (i18n) Engine
    3-Language Support: English (en, default), Hindi (hi), Bengali (bn)
    Translates 100% of the entire website across all 6 pages:
    - Navigation, Badges, Headers, Hero
@@ -31,7 +31,7 @@ PIPOZA.LANGUAGES = [
 PIPOZA.TRANSLATIONS = {
   en: {
     // Navigation
-    'nav.brand_sub': 'Web & Android App Studio',
+    'nav.brand_sub': 'Web & Android Apps',
     'nav.home': 'Home',
     'nav.build': 'What We Build',
     'nav.work': 'Our Work',
@@ -48,7 +48,7 @@ PIPOZA.TRANSLATIONS = {
     'hero.h1_prefix': 'Bespoke Websites & Android Apps for',
     'hero.h1_built': 'built to',
     'hero.h1_gradient': 'dominate & convert',
-    'hero.lead': 'PipoZa Dev engineers custom web experiences (4–5 days, 0₹ advance) and industry-grade personalised Android applications (1–2 weeks, 20% advance, signed APK + Google Play Store publishing). Website hosting included & all deals done Face-to-Face.',
+    'hero.lead': 'PipoZa engineers custom web experiences (4–5 days, 0₹ advance) and industry-grade personalised Android applications (1–2 weeks, 20% advance, signed APK + Google Play Store publishing). Website hosting included & all deals done Face-to-Face.',
     'hero.cta_start': 'Direct Contact →',
     'hero.cta_contact': 'Direct Contact ↗',
     'hero.cta_work': 'Explore Live Work',
@@ -147,13 +147,13 @@ PIPOZA.TRANSLATIONS = {
     'terms.read_full_btn': '📜 View Studio Terms & Conditions →',
     'terms.page_kicker': 'Master Service Agreement & Legal Binding Policy',
     'terms.page_title': 'Legal Terms &amp; Conditions — <span class="g">Websites &amp; Android Apps</span>',
-    'terms.page_sub': 'Official legal terms governing PipoZa Dev’s bespoke websites (0₹ advance), personalised Android applications (20% advance), 3-year custom domain cycles, database & data security liability disclaimers, Google Play Store publishing, and Face-to-Face commercial agreements.',
+    'terms.page_sub': 'Official legal terms governing PipoZa’s bespoke websites (0₹ advance), personalised Android applications (20% advance), 3-year custom domain cycles, database & data security liability disclaimers, Google Play Store publishing, and Face-to-Face commercial agreements.',
     'terms.preamble_badge': '⚖️ Legally Binding Studio Agreement · Effective 2026',
     'terms.preamble_sub': '100% Face-to-Face Deals · Zero Hidden Charges',
-    'terms.preamble_body': 'By commissioning, purchasing, or utilizing any Website, Android Application (<code>.APK</code>), Custom Domain, or Database service from <strong>PipoZa Dev</strong> (represented by Founders <strong>Piush Mandal</strong> &amp; <strong>Arya Mondal</strong>), the Client ("You") explicitly acknowledges, understands, and agrees to be legally bound by all clauses, payment terms (<strong>0₹ Advance for Websites; 20% Advance for Android Applications</strong>), intellectual property protections, and data security liability waivers set forth below.',
+    'terms.preamble_body': 'By commissioning, purchasing, or utilizing any Website, Android Application (<code>.APK</code>), Custom Domain, or Database service from <strong>PipoZa</strong> (represented by Founders <strong>Piush Mandal</strong> &amp; <strong>Arya Mondal</strong>), the Client ("You") explicitly acknowledges, understands, and agrees to be legally bound by all clauses, payment terms (<strong>0₹ Advance for Websites; 20% Advance for Android Applications</strong>), intellectual property protections, and data security liability waivers set forth below.',
     'terms.a7_num': '07 · Play Store Profile & Governance',
     'terms.a7_title': '▶️ Exclusive Studio Profile Publishing & Google Policies',
-    'terms.a7_desc': 'All Android applications uploaded to the Google Play Store are <strong>hosted exclusively under PipoZa Dev’s Official Developer Profile</strong> and must adhere to Google Play Developer Program Policies.',
+    'terms.a7_desc': 'All Android applications uploaded to the Google Play Store are <strong>hosted exclusively under PipoZa’s Official Developer Profile</strong> and must adhere to Google Play Developer Program Policies.',
     'terms.a8_num': '08 · 4–5 Day Website Engineering Sprint',
     'terms.a8_title': '⚡ 4–5 Working Days Website Turnaround (0₹ Advance)',
     'terms.a8_desc': 'Custom websites are engineered in <strong>4 to 5 working days</strong> with <strong>zero advance fee required</strong>. Payment is settled Face-to-Face upon live preview verification.',
@@ -165,10 +165,10 @@ PIPOZA.TRANSLATIONS = {
     'terms.a10_desc': 'Payments made for <strong>3-year custom domains</strong> (<code>.in</code>, <code>.com</code>), <strong>Google Play Store uploads (₹700–₹1,500)</strong>, and <strong>cloud databases</strong> are paid to external registrars/providers and are <strong>non-refundable</strong>.',
     'terms.a11_num': '11 · Client Content Legality & Indemnity',
     'terms.a11_title': '📜 Client Responsibility for Lawful Content & Operations',
-    'terms.a11_desc': 'The Client warrants that all brand content, media, and business operations comply with the <strong>Information Technology Act, 2000 (India)</strong> and agrees to <strong>indemnify PipoZa Dev</strong> against any third-party claims.',
+    'terms.a11_desc': 'The Client warrants that all brand content, media, and business operations comply with the <strong>Information Technology Act, 2000 (India)</strong> and agrees to <strong>indemnify PipoZa</strong> against any third-party claims.',
     'terms.a12_num': '12 · Limitation of Liability & Indian Law',
     'terms.a12_title': '🏛️ Liability Cap, Third-Party Outages & Jurisdiction',
-    'terms.a12_desc': 'PipoZa Dev’s maximum liability shall never exceed the studio development fee paid. All agreements are governed by the <strong>Laws of India</strong> and resolved via direct Face-to-Face founder mediation.',
+    'terms.a12_desc': 'PipoZa’s maximum liability shall never exceed the studio development fee paid. All agreements are governed by the <strong>Laws of India</strong> and resolved via direct Face-to-Face founder mediation.',
 
     // Section 2: Works Showcase
     'showcase.kicker': 'Case Studies & Portfolios',
@@ -200,8 +200,8 @@ PIPOZA.TRANSLATIONS = {
     // Section 4: Verified Client Testimonials
     'testi.kicker': 'Verified Client Feedback',
     'testi.title': 'What founders say about shipping with us.',
-    'testi.desc': 'Real feedback from businesses that launched their digital presence in 4–5 days with PipoZa Dev.',
-    'testi.q1': '“PipoZa Dev delivered our clinic website in exactly 4 days. Patients find it super easy to explore our non-surgical pain treatments and book appointments over WhatsApp. Flawless work!”',
+    'testi.desc': 'Real feedback from businesses that launched their digital presence in 4–5 days with PipoZa.',
+    'testi.q1': '“PipoZa delivered our clinic website in exactly 4 days. Patients find it super easy to explore our non-surgical pain treatments and book appointments over WhatsApp. Flawless work!”',
     'testi.a1_name': 'Revive Pain Care Clinic',
     'testi.a1_role': 'Naturopathic Health Hub · Noida',
     'testi.q2': '“The cyber aesthetic and sub-second page loads blew our investors away. Our conversion rate jumped 3.2x compared to our previous generic template. Zero bloat, pure speed.”',
@@ -232,10 +232,10 @@ PIPOZA.TRANSLATIONS = {
     'srv.title': 'Whatever your business does, we engineer a site that makes it stand out.',
     'srv.desc': 'Every website starts from your business’s true requirements — then gets custom-coded for speed, conversion, and effortless user flow. Free lifetime hosting included on every build.',
     'srv.comp_kicker': 'Why Choose Us',
-    'srv.comp_title': 'How PipoZa Dev Compares',
+    'srv.comp_title': 'How PipoZa Compares',
     'srv.comp_sub': 'Why bespoke engineering consistently outperforms generic templates and slow agencies.',
     'srv.th_scope': 'Feature & Scope',
-    'srv.th_pipoza': '✨ PipoZa Dev',
+    'srv.th_pipoza': '✨ PipoZa',
     'srv.th_templates': 'DIY Builders (Wix / Shopify)',
     'srv.th_agencies': 'Traditional Web Agencies',
     'srv.f_turnaround': 'Turnaround Time',
@@ -332,7 +332,7 @@ PIPOZA.TRANSLATIONS = {
     // About Page specific
     'about.kicker': 'Studio Philosophy',
     'about.title': 'A dedicated web engineering studio built around speed, craft, and precision.',
-    'about.desc': 'We founded PipoZa Dev to eliminate the two biggest headaches in web design: bloated agencies that take two months to deliver, and flimsy templates that break on mobile. We handcraft fast, stunning websites that actually convert.',
+    'about.desc': 'We founded PipoZa to eliminate the two biggest headaches in web design: bloated agencies that take two months to deliver, and flimsy templates that break on mobile. We handcraft fast, stunning websites that actually convert.',
     'about.p1_title': 'The 4–5 Day Sprint Focus',
     'about.p1_desc': 'We work in focused, uninterrupted development sprints. Instead of juggling dozens of concurrent projects with long idle periods, we concentrate on your build end-to-end to launch in 4 to 5 working days.',
     'about.p2_title': 'Zero Template Bloat',
@@ -361,7 +361,7 @@ PIPOZA.TRANSLATIONS = {
 
     // Founders Section
     'about.founders_kicker': 'Studio Leadership',
-    'about.founders_title': 'Meet the Founders of PipoZa Dev',
+    'about.founders_title': 'Meet the Founders of PipoZa',
     'about.founders_sub': 'Direct engineering craftsmanship with zero agency bureaucracy. Meet the dedicated team building your digital future.',
     'about.piush_name': 'Piush Mandal',
     'about.piush_crown': '👑 Chief Architect, Main Developer & Studio Owner',
@@ -373,7 +373,7 @@ PIPOZA.TRANSLATIONS = {
     'about.piush_role1': 'Main Developer',
     'about.piush_role2': 'Owner',
     'about.piush_role3': 'Support',
-    'about.piush_bio': 'Lead developer and founder of PipoZa Dev. Leads end-to-end architecture, bespoke front-end engineering, performance tuning, and direct client support throughout every project sprint.',
+    'about.piush_bio': 'Lead developer and founder of PipoZa. Leads end-to-end architecture, bespoke front-end engineering, performance tuning, and direct client support throughout every project sprint.',
     'about.chat_piush': 'Chat with Piush →',
     'about.email_piush': 'Direct Email ↗',
     'about.arjo_name': 'Arya Mondal',
@@ -384,7 +384,7 @@ PIPOZA.TRANSLATIONS = {
     'about.arjo_m3': 'Client Care',
     'about.arjo_role1': 'Partner',
     'about.arjo_role2': 'Moderator',
-    'about.arjo_bio': 'Partner and studio moderator at PipoZa Dev. Coordinates client communications, reviews quality standards, oversees project milestones, and ensures seamless satisfaction on every delivery.',
+    'about.arjo_bio': 'Partner and studio moderator at PipoZa. Coordinates client communications, reviews quality standards, oversees project milestones, and ensures seamless satisfaction on every delivery.',
     'about.chat_arjo': 'Chat with Arya →',
     'about.ig_studio': 'Instagram Studio ↗',
 
@@ -497,7 +497,7 @@ PIPOZA.TRANSLATIONS = {
     'field.msg_sender': 'Your Name / Business Name *',
     'field.msg_sender_ph': 'e.g. Rahul Sharma (Zenith Logistics)',
     'field.msg_body': 'What are you looking to build? *',
-    'field.msg_body_ph': 'Hi PipoZa Dev, I am looking for a modern website for our new startup. Can you provide an estimate and availability for a 4-5 day sprint?',
+    'field.msg_body_ph': 'Hi PipoZa, I am looking for a modern website for our new startup. Can you provide an estimate and availability for a 4-5 day sprint?',
 
     // Color Studio
     'studio.presets_title': 'Preset Color Palettes',
@@ -523,8 +523,8 @@ PIPOZA.TRANSLATIONS = {
     'foot.email_link': 'Email: pipoza.dev@gmail.com',
     'foot.wa_link': 'WhatsApp: +91 78108 88147',
     'foot.ig_link': 'Instagram: @pipozadev.studio',
-    'foot.copy': '© 2026 PipoZa Dev. All rights reserved.',
-    'foot.made': 'Designed & Engineered by PipoZa Dev'
+    'foot.copy': '© 2026 PipoZa. All rights reserved.',
+    'foot.made': 'Designed & Engineered by PipoZa'
   },
 
   hi: {
@@ -546,7 +546,7 @@ PIPOZA.TRANSLATIONS = {
     'hero.h1_prefix': 'कस्टम वेबसाइट्स और एंड्रॉइड ऐप्स विशेष',
     'hero.h1_built': 'जो बढ़ाएं आपका',
     'hero.h1_gradient': 'बिजनेस और कन्वर्ज़न',
-    'hero.lead': 'पिपोज़ा देव (PipoZa Dev) 4–5 दिनों में कस्टम वेबसाइट्स (0₹ एडवांस) और 1–2 सप्ताह में हाई-क्वालिटी पर्सनलाइज्ड एंड्रॉइड ऐप्स (20% एडवांस, साइन्ड APK + Play Store अपलोड) बनाता है। वेबसाइट होस्टिंग शामिल है और सभी डील्स आमने-सामने (Face-to-Face) होती हैं।',
+    'hero.lead': 'पिपोज़ा (PipoZa) 4–5 दिनों में कस्टम वेबसाइट्स (0₹ एडवांस) और 1–2 सप्ताह में हाई-क्वालिटी पर्सनलाइज्ड एंड्रॉइड ऐप्स (20% एडवांस, साइन्ड APK + Play Store अपलोड) बनाता है। वेबसाइट होस्टिंग शामिल है और सभी डील्स आमने-सामने (Face-to-Face) होती हैं।',
     'hero.cta_start': 'सीधे संपर्क करें →',
     'hero.cta_contact': 'सीधे संपर्क करें ↗',
     'hero.cta_work': 'लाइव काम देखें',
@@ -645,13 +645,13 @@ PIPOZA.TRANSLATIONS = {
     'terms.read_full_btn': '📜 स्टूडियो नियम एवं शर्तें देखें →',
     'terms.page_kicker': 'मास्टर सर्विस एग्रीमेंट एवं कानूनी नीति',
     'terms.page_title': 'कानूनी नियम एवं शर्तें — <span class="g">वेबसाइट्स व एंड्रॉइड ऐप्स</span>',
-    'terms.page_sub': 'पिपोज़ा देव की कस्टम वेबसाइट्स (0₹ एडवांस), पर्सनलाइज्ड एंड्रॉइड ऐप्स (20% एडवांस), 3-वर्षीय कस्टम डोमेन, डेटाबेस सुरक्षा अस्वीकरण और आमने-सामने (Face-to-Face) समझौतों की आधिकारिक शर्तें।',
+    'terms.page_sub': 'पिपोज़ा की कस्टम वेबसाइट्स (0₹ एडवांस), पर्सनलाइज्ड एंड्रॉइड ऐप्स (20% एडवांस), 3-वर्षीय कस्टम डोमेन, डेटाबेस सुरक्षा अस्वीकरण और आमने-सामने (Face-to-Face) समझौतों की आधिकारिक शर्तें।',
     'terms.preamble_badge': '⚖️ कानूनी रूप से बाध्यकारी स्टूडियो समझौता · प्रभावी 2026',
     'terms.preamble_sub': '100% आमने-सामने (Face-to-Face) डील्स · शून्य छिपे शुल्क',
-    'terms.preamble_body': '<strong>PipoZa Dev</strong> (संस्थापक <strong>पीयूष मंडल</strong> एवं <strong>आर्य मंडल</strong>) से कोई भी वेबसाइट, एंड्रॉइड ऐप (<code>.APK</code>), कस्टम डोमेन या डेटाबेस सेवा लेने पर क्लाइंट नीचे दिए गए सभी कानूनी नियमों, भुगतान शर्तों (<strong>वेबसाइट पर 0₹ एडवांस; एंड्रॉइड ऐप पर 20% एडवांस</strong>) और डेटा सुरक्षा अस्वीकरणों से पूरी तरह सहमत होता है।',
+    'terms.preamble_body': '<strong>PipoZa</strong> (संस्थापक <strong>पीयूष मंडल</strong> एवं <strong>आर्य मंडल</strong>) से कोई भी वेबसाइट, एंड्रॉइड ऐप (<code>.APK</code>), कस्टम डोमेन या डेटाबेस सेवा लेने पर क्लाइंट नीचे दिए गए सभी कानूनी नियमों, भुगतान शर्तों (<strong>वेबसाइट पर 0₹ एडवांस; एंड्रॉइड ऐप पर 20% एडवांस</strong>) और डेटा सुरक्षा अस्वीकरणों से पूरी तरह सहमत होता है।',
     'terms.a7_num': '07 · Play Store प्रोफाइल एवं नियम',
     'terms.a7_title': '▶️ केवल आधिकारिक स्टूडियो प्रोफाइल पर पब्लिशिंग',
-    'terms.a7_desc': 'Google Play Store पर अपलोड किए जाने वाले सभी ऐप्स <strong>केवल PipoZa Dev के आधिकारिक डेवलपर प्रोफाइल</strong> पर ही प्रकाशित किए जाएंगे।',
+    'terms.a7_desc': 'Google Play Store पर अपलोड किए जाने वाले सभी ऐप्स <strong>केवल PipoZa के आधिकारिक डेवलपर प्रोफाइल</strong> पर ही प्रकाशित किए जाएंगे।',
     'terms.a8_num': '08 · 4–5 दिन वेबसाइट स्प्रिंट',
     'terms.a8_title': '⚡ 4–5 कार्य दिवसों में वेबसाइट तैयार (0₹ एडवांस)',
     'terms.a8_desc': 'कस्टम वेबसाइट्स बिना किसी एडवांस शुल्क के <strong>4 से 5 कार्य दिवसों</strong> में तैयार की जाती हैं और लाइव प्रीव्यू के बाद Face-to-Face भुगतान होता है।',
@@ -698,8 +698,8 @@ PIPOZA.TRANSLATIONS = {
     // Section 4: Verified Client Testimonials
     'testi.kicker': 'सत्यापित ग्राहक प्रतिक्रिया',
     'testi.title': 'हमारे साथ काम करने पर संस्थापकों की राय।',
-    'testi.desc': 'उन व्यवसायों की वास्तविक प्रतिक्रिया जिन्होंने पिपोजा देव के साथ ४–५ दिनों में अपनी डिजिटल पहचान बनाई।',
-    'testi.q1': '“पिपोजा देव ने मात्र ४ दिनों में हमारे क्लिनिक की वेबसाइट डिलीवर कर दी। मरीजों के लिए उपचार देखना और व्हाट्सएप से अपॉइंटमेंट बुक करना बेहद आसान हो गया है!”',
+    'testi.desc': 'उन व्यवसायों की वास्तविक प्रतिक्रिया जिन्होंने पिपोज़ा के साथ ४–५ दिनों में अपनी डिजिटल पहचान बनाई।',
+    'testi.q1': '“पिपोज़ा ने मात्र ४ दिनों में हमारे क्लिनिक की वेबसाइट डिलीवर कर दी। मरीजों के लिए उपचार देखना और व्हाट्सएप से अपॉइंटमेंट बुक करना बेहद आसान हो गया है!”',
     'testi.a1_name': 'रिवाइव पेन केयर क्लीनिक',
     'testi.a1_role': 'प्राकृतिक चिकित्सा केंद्र · नोएडा',
     'testi.q2': '“साइबर लुक और एक सेकंड से भी कम लोडिंग स्पीड ने हमारे निवेशकों को प्रभावित कर दिया। पुराने टेम्पलेट की तुलना में हमारा कन्वर्ज़न ३.२ गुना बढ़ गया।”',
@@ -711,7 +711,7 @@ PIPOZA.TRANSLATIONS = {
 
     // Policy Cards on Index
     'policy.hosting_title': 'क्लाउड होस्टिंग, हमारी तरफ से',
-    'policy.hosting_desc': 'हमारी हर वेबसाइट <span class="hl">फ्री पिपोजा क्लाउड होस्टिंग</span> पर लाइव होती है। कोई मासिक होस्टिंग शुल्क या छिपा हुआ रिन्यूअल चार्ज नहीं।',
+    'policy.hosting_desc': 'हमारी हर वेबसाइट <span class="hl">फ्री पिपोज़ा क्लाउड होस्टिंग</span> पर लाइव होती है। कोई मासिक होस्टिंग शुल्क या छिपा हुआ रिन्यूअल चार्ज नहीं।',
     'policy.domain_title': 'कस्टम डोमेन केवल वास्तविक लागत पर',
     'policy.domain_desc': 'क्या आप सबडोमेन की जगह <span class="hl">yourbrand.com</span> चाहते हैं? हम सीधे DNS सेट करते हैं — आप सिर्फ रजिस्ट्रार की वास्तविक लागत देते हैं।',
     'policy.sprint_title': '४–५ कार्य दिवसों में डिलीवरी',
@@ -730,10 +730,10 @@ PIPOZA.TRANSLATIONS = {
     'srv.title': 'आपका व्यवसाय जो भी हो, हम ऐसी वेबसाइट बनाते हैं जो सबसे अलग दिखे।',
     'srv.desc': 'हर वेबसाइट आपकी वास्तविक आवश्यकताओं से शुरू होती है — फिर स्पीड और कन्वर्ज़न के लिए कस्टम कोड की जाती है। हर निर्माण में लाइफटाइम फ्री होस्टिंग शामिल।',
     'srv.comp_kicker': 'हमें क्यों चुनें',
-    'srv.comp_title': 'पिपोजा देव की तुलना अन्य विकल्पों से',
+    'srv.comp_title': 'पिपोज़ा की तुलना अन्य विकल्पों से',
     'srv.comp_sub': 'देखें कि व्यवसाय भारी एजेंसियों और धीमे बिल्डरों की तुलना में हमारे ४-५ दिन के स्प्रिंट को क्यों चुनते हैं।',
     'srv.th_scope': 'फीचर्स और दायरा',
-    'srv.th_pipoza': '✨ पिपोजा देव',
+    'srv.th_pipoza': '✨ पिपोज़ा',
     'srv.th_templates': 'DIY बिल्डर्स (Wix / Shopify)',
     'srv.th_agencies': 'पारंपरिक वेब एजेंसियां',
     'srv.f_turnaround': 'डिलीवरी समय',
@@ -830,7 +830,7 @@ PIPOZA.TRANSLATIONS = {
     // About Page specific
     'about.kicker': 'स्टूडियो की सोच',
     'about.title': 'स्पीड, शिल्प और सटीकता पर आधारित एक समर्पित वेब इंजीनियरिंग स्टूडियो।',
-    'about.desc': 'हमने धीमी एजेंसियों और कमजोर टेम्पलेट्स से मुक्ति दिलाने के लिए पिपोजा देव की शुरुआत की। हम ऐसी वेबसाइट बनाते हैं जो वास्तव में परिणाम देती हैं।',
+    'about.desc': 'हमने धीमी एजेंसियों और कमजोर टेम्पलेट्स से मुक्ति दिलाने के लिए पिपोज़ा की शुरुआत की। हम ऐसी वेबसाइट बनाते हैं जो वास्तव में परिणाम देती हैं।',
     'about.p1_title': '४–५ दिन का फोकस्ड स्प्रिंट',
     'about.p1_desc': 'हम एक समय में पूरे समर्पण के साथ काम करते हैं। लंबी देरी और बेकार मीटिंग्स को हटाकर हम ४ से ५ कार्य दिवसों में काम पूरा करते हैं।',
     'about.p2_title': 'शून्य-टेम्पलेट गारंटी',
@@ -859,7 +859,7 @@ PIPOZA.TRANSLATIONS = {
 
     // Founders Section
     'about.founders_kicker': 'स्टूडियो नेतृत्व',
-    'about.founders_title': 'PipoZa Dev के संस्थापकों से मिलें',
+    'about.founders_title': 'PipoZa के संस्थापकों से मिलें',
     'about.founders_sub': 'बिना किसी एजेंसी की देरी के सीधा इंजीनियरिंग कौशल। अपने डिजिटल भविष्य का निर्माण करने वाली समर्पित टीम से मिलें।',
     'about.piush_name': 'पीयूष मंडल',
     'about.piush_crown': '👑 मुख्य आर्किटेक्ट, मुख्य डेवलपर एवं स्टूडियो मालिक',
@@ -871,7 +871,7 @@ PIPOZA.TRANSLATIONS = {
     'about.piush_role1': 'मुख्य डेवलपर',
     'about.piush_role2': 'मालिक',
     'about.piush_role3': 'सपोर्ट',
-    'about.piush_bio': 'PipoZa Dev के मुख्य डेवलपर और संस्थापक। प्रत्येक प्रोजेक्ट स्प्रिंट के दौरान एंड-टू-एंड आर्किटेक्चर, कस्टम फ्रंट-एंड इंजीनियरिंग, हाई-स्पीड परफॉर्मेंस और सीधे क्लाइंट सपोर्ट का नेतृत्व करते हैं।',
+    'about.piush_bio': 'PipoZa के मुख्य डेवलपर और संस्थापक। प्रत्येक प्रोजेक्ट स्प्रिंट के दौरान एंड-टू-एंड आर्किटेक्चर, कस्टम फ्रंट-एंड इंजीनियरिंग, हाई-स्पीड परफॉर्मेंस और सीधे क्लाइंट सपोर्ट का नेतृत्व करते हैं।',
     'about.chat_piush': 'पीयूष से चैट करें →',
     'about.email_piush': 'सीधा ईमेल ↗',
     'about.arjo_name': 'आर्य मंडल',
@@ -882,7 +882,7 @@ PIPOZA.TRANSLATIONS = {
     'about.arjo_m3': 'क्लाइंट केयर',
     'about.arjo_role1': 'पार्टनर',
     'about.arjo_role2': 'मॉडरेटर',
-    'about.arjo_bio': 'PipoZa Dev में पार्टनर और स्टूडियो मॉडरेटर। क्लाइंट संवाद का समन्वय करते हैं, गुणवत्ता मानकों की समीक्षा करते हैं, प्रोजेक्ट चरणों की देखरेख करते हैं और हर डिलीवरी पर पूर्ण संतुष्टि सुनिश्चित करते हैं।',
+    'about.arjo_bio': 'PipoZa में पार्टनर और स्टूडियो मॉडरेटर। क्लाइंट संवाद का समन्वय करते हैं, गुणवत्ता मानकों की समीक्षा करते हैं, प्रोजेक्ट चरणों की देखरेख करते हैं और हर डिलीवरी पर पूर्ण संतुष्टि सुनिश्चित करते हैं।',
     'about.chat_arjo': 'आर्य से चैट करें →',
     'about.ig_studio': 'इंस्टाग्राम स्टूडियो ↗',
 
@@ -962,7 +962,7 @@ PIPOZA.TRANSLATIONS = {
     'field.msg_sender': 'आपका नाम / व्यवसाय का नाम *',
     'field.msg_sender_ph': 'उदा. राहुल शर्मा (जेनिथ लॉजिस्टिक्स)',
     'field.msg_body': 'आप किस प्रकार की वेबसाइट बनवाना चाहते हैं? *',
-    'field.msg_body_ph': 'नमस्ते PipoZa Dev, मैं अपने नए स्टार्टअप के लिए एक आधुनिक वेबसाइट बनवाना चाहता हूँ। कृपया 4-5 दिन के स्प्रिंट के लिए अनुमान बताएं।',
+    'field.msg_body_ph': 'नमस्ते PipoZa, मैं अपने नए स्टार्टअप के लिए एक आधुनिक वेबसाइट बनवाना चाहता हूँ। कृपया 4-5 दिन के स्प्रिंट के लिए अनुमान बताएं।',
 
     // Color Studio
     'studio.presets_title': 'प्रीसेट कलर पैलेट्स',
@@ -988,8 +988,8 @@ PIPOZA.TRANSLATIONS = {
     'foot.email_link': 'ईमेल: pipoza.dev@gmail.com',
     'foot.wa_link': 'व्हाट्सएप: +91 78108 88147',
     'foot.ig_link': 'इंस्टाग्राम: @pipozadev.studio',
-    'foot.copy': '© 2026 PipoZa Dev. सर्वाधिकार सुरक्षित।',
-    'foot.made': 'पिपोजा देव द्वारा डिज़ाइन एवं निर्मित'
+    'foot.copy': '© 2026 PipoZa. सर्वाधिकार सुरक्षित।',
+    'foot.made': 'पिपोज़ा द्वारा डिज़ाइन एवं निर्मित'
   },
 
   bn: {
@@ -1011,7 +1011,7 @@ PIPOZA.TRANSLATIONS = {
     'hero.h1_prefix': 'কাস্টম ওয়েবসাইট ও অ্যান্ড্রয়েড অ্যাপস',
     'hero.h1_built': 'যা আনবে সর্বোচ্চ',
     'hero.h1_gradient': 'গ্রোথ ও কনভার্সন',
-    'hero.lead': 'পিপোজা ডেভ (PipoZa Dev) ৪–৫ দিনে কাস্টম ওয়েবসাইট (০₹ অগ্রিম) এবং ১–২ সপ্তাহে হাই-কোয়ালিটি পার্সোনালাইজড অ্যান্ড্রয়েড অ্যাপস (২০% অগ্রিম, সাইন্ড APK + Play Store আপলোড) তৈরি করে। ওয়েবসাইট হোস্টিং অন্তর্ভুক্ত এবং সমস্ত ডিল মুখোমুখি (Face-to-Face) সম্পন্ন হয়।',
+    'hero.lead': 'পিপোজা (PipoZa) ৪–৫ দিনে কাস্টম ওয়েবসাইট (০₹ অগ্রিম) এবং ১–২ সপ্তাহে হাই-কোয়ালিটি পার্সোনালাইজড অ্যান্ড্রয়েড অ্যাপস (২০% অগ্রিম, সাইন্ড APK + Play Store আপলোড) তৈরি করে। ওয়েবসাইট হোস্টিং অন্তর্ভুক্ত এবং সমস্ত ডিল মুখোমুখি (Face-to-Face) সম্পন্ন হয়।',
     'hero.cta_start': 'সরাসরি যোগাযোগ →',
     'hero.cta_contact': 'সরাসরি যোগাযোগ ↗',
     'hero.cta_work': 'আমাদের কাজ দেখুন',
@@ -1110,13 +1110,13 @@ PIPOZA.TRANSLATIONS = {
     'terms.read_full_btn': '📜 স্টুডিওর নিয়ম ও শর্তাবলী দেখুন →',
     'terms.page_kicker': 'মাস্টার সার্ভিস এগ্রিমেন্ট ও আইনি নীতিমালা',
     'terms.page_title': 'আইনি নিয়ম ও শর্তাবলী — <span class="g">ওয়েবসাইট ও অ্যান্ড্রয়েড অ্যাপস</span>',
-    'terms.page_sub': 'পিপোজা ডেভের কাস্টম ওয়েবসাইট (০₹ অগ্রিম), পার্সোনালাইজড অ্যান্ড্রয়েড অ্যাপস (২০% অগ্রিম), ৩-বছরের কাস্টম ডোমেন, ডেটাবেস সুরক্ষা দাবিত্যাগ এবং মুখোমুখি (Face-to-Face) চুক্তির অফিসিয়াল শর্তাবলী।',
+    'terms.page_sub': 'পিপোজার কাস্টম ওয়েবসাইট (০₹ অগ্রিম), পার্সোনালাইজড অ্যান্ড্রয়েড অ্যাপস (২০% অগ্রিম), ৩-বছরের কাস্টম ডোমেন, ডেটাবেস সুরক্ষা দাবিত্যাগ এবং মুখোমুখি (Face-to-Face) চুক্তির অফিসিয়াল শর্তাবলী।',
     'terms.preamble_badge': '⚖️ আইনত বাধ্যতামূলক স্টুডিও চুক্তি · কার্যকর ২০২৬',
     'terms.preamble_sub': '১০০% মুখোমুখি (Face-to-Face) ডিল · শূন্য লুকানো খরচ',
-    'terms.preamble_body': '<strong>PipoZa Dev</strong> (প্রতিষ্ঠাতা <strong>পীযূষ মণ্ডল</strong> ও <strong>আর‍্য মণ্ডল</strong>) থেকে যেকোনো ওয়েবসাইট, অ্যান্ড্রয়েড অ্যাপ (<code>.APK</code>), কাস্টম ডোমেন বা ডেটাবেস সেবা গ্রহণ করলে ক্লায়েন্ট নিচের সমস্ত আইনি ধারা, পেমেন্ট শর্ত (<strong>ওয়েবসাইটে ০₹ অগ্রিম; অ্যান্ড্রয়েড অ্যাপে ২০% অগ্রিম</strong>) এবং ডেটা সুরক্ষা দাবিত্যাগের সাথে সম্পূর্ণ সম্মত হন।',
+    'terms.preamble_body': '<strong>PipoZa</strong> (প্রতিষ্ঠাতা <strong>পীযূষ মণ্ডল</strong> ও <strong>আর‍্য মণ্ডল</strong>) থেকে যেকোনো ওয়েবসাইট, অ্যান্ড্রয়েড অ্যাপ (<code>.APK</code>), কাস্টম ডোমেন বা ডেটাবেস সেবা গ্রহণ করলে ক্লায়েন্ট নিচের সমস্ত আইনি ধারা, পেমেন্ট শর্ত (<strong>ওয়েবসাইটে ০₹ অগ্রিম; অ্যান্ড্রয়েড অ্যাপে ২০% অগ্রিম</strong>) এবং ডেটা সুরক্ষা দাবিত্যাগের সাথে সম্পূর্ণ সম্মত হন।',
     'terms.a7_num': '০৭ · Play Store প্রোফাইল ও নীতিমালা',
     'terms.a7_title': '▶️ শুধুমাত্র অফিসিয়াল স্টুডিও প্রোফাইলে পাবলিশিং',
-    'terms.a7_desc': 'Google Play Store-এ আপলোড করা সমস্ত অ্যাপ <strong>শুধুমাত্র PipoZa Dev-এর অফিসিয়াল ডেভেলপার প্রোফাইলে</strong> প্রকাশিত হবে।',
+    'terms.a7_desc': 'Google Play Store-এ আপলোড করা সমস্ত অ্যাপ <strong>শুধুমাত্র PipoZa-এর অফিসিয়াল ডেভেলপার প্রোফাইলে</strong> প্রকাশিত হবে।',
     'terms.a8_num': '০৮ · ৪–৫ দিনের ওয়েবসাইট স্প্রিন্ট',
     'terms.a8_title': '⚡ ৪–৫ কর্মদিবসে ওয়েবসাইট ডেলিভারি (০₹ অগ্রিম)',
     'terms.a8_desc': 'কাস্টম ওয়েবসাইট কোনো অগ্রিম ফি ছাড়াই <strong>৪ থেকে ৫ কর্মদিবসে</strong> তৈরি করা হয় এবং লাইভ প্রিভিউ দেখার পর Face-to-Face পেমেন্ট সম্পন্ন হয়।',
@@ -1163,8 +1163,8 @@ PIPOZA.TRANSLATIONS = {
     // Section 4: Verified Client Testimonials
     'testi.kicker': 'যাচাইকৃত ক্লায়েন্ট মতামত',
     'testi.title': 'আমাদের সাথে কাজ করা উদ্যোক্তাদের অভিজ্ঞতা।',
-    'testi.desc': 'যারা পিপোজা ডেভের সাথে ৪–৫ দিনে তাদের ডিজিটাল প্ল্যাটফর্ম চালু করেছেন।',
-    'testi.q1': '“পিপোজা ডেভ ঠিক ৪ দিনে আমাদের ক্লিনিকের ওয়েবসাইট তৈরি করেছে। রোগীরা এখন খুব সহজেই আমাদের থেরাপি সম্পর্কে জানতে পারেন এবং হোয়াটসঅ্যাপে বুকিং দেন!”',
+    'testi.desc': 'যারা পিপোজার সাথে ৪–৫ দিনে তাদের ডিজিটাল প্ল্যাটফর্ম চালু করেছেন।',
+    'testi.q1': '“পিপোজা ঠিক ৪ দিনে আমাদের ক্লিনিকের ওয়েবসাইট তৈরি করেছে। রোগীরা এখন খুব সহজেই আমাদের থেরাপি সম্পর্কে জানতে পারেন এবং হোয়াটসঅ্যাপে বুকিং দেন!”',
     'testi.a1_name': 'রিভাইভ পেইন কেয়ার ক্লিনিক',
     'testi.a1_role': 'প্রাকৃতিক স্বাস্থ্য কেন্দ্র · নয়ডা',
     'testi.q2': '“সাইবার ডিজাইন এবং ১ সেকেন্ডের কম লোডিং স্পিড আমাদের বিনিয়োগকারীদের মুগ্ধ করেছে। আগের টেমপ্লেটের তুলনায় আমাদের কনভার্সন ৩.২ গুণ বেড়েছে।”',
@@ -1178,7 +1178,7 @@ PIPOZA.TRANSLATIONS = {
     'policy.hosting_title': 'ক্লাউড হোস্টিং, আমাদের পক্ষ থেকে',
     'policy.hosting_desc': 'আমাদের তৈরি প্রতিটি ওয়েবসাইট <span class="hl">ফ্রি পিপোজা ক্লাউড হোস্টিংয়ে</span> চলে। কোনো মাসিক চার্জ বা লুকানো রিনিউয়াল ফি নেই।',
     'policy.domain_title': 'আসল দামে কাস্টম ডোমেন',
-    'policy.domain_desc': 'সাবডোমেনের বদলে <span class="hl">yourbrand.com</span> চান? আমরা সরাসরি DNS কনফিগার করে দিই — আপনি শুধু রেজিস্ট্রারের আসল মূল্য পরিশোধ করবেন।',
+    'policy.domain_desc': 'সাবডোমেনের বদলে <span class="hl">yourbrand.com</span> চান? हम সরাসরি DNS কনফিগার করে দিই — আপনি শুধু রেজিস্ট্রারের আসল মূল্য পরিশোধ করবেন।',
     'policy.sprint_title': '৪–৫ কর্মদিবসে ডেলিভারি',
     'policy.sprint_desc': 'আমরা নিবেদিত স্প্রিন্টে কাজ করি যাতে আপনার ওয়েবসাইট <span class="hl">৪ থেকে ৫ কর্মদিবসে</span> চালু হয়। পরবর্তীতে যে কোনো সমন্বয় দ্রুত সমাধান করা হয়।',
 
@@ -1195,10 +1195,10 @@ PIPOZA.TRANSLATIONS = {
     'srv.title': 'আপনার ব্যবসা যাই হোক, আমরা এমন ওয়েবসাইট তৈরি করি যা সবার চেয়ে আলাদা।',
     'srv.desc': 'প্রতিটি ওয়েবসাইট আপনার ব্যবসার আসল চাহিদা বুঝে শুরু হয় — এরপর গতি ও কনভার্সনের জন্য কাস্টম কোডিং করা হয়। সাথে আজীবন ফ্রি হোস্টিং।',
     'srv.comp_kicker': 'কেন আমাদের বেছে নেবেন',
-    'srv.comp_title': 'পিপোজা ডেভের সাথে অন্যান্য সেবার তুলনা',
+    'srv.comp_title': 'পিপোজার সাথে অন্যান্য সেবার তুলনা',
     'srv.comp_sub': 'দেখুন কেন ব্র্যান্ডগুলো জটিল এজেন্সি ও ধীরগতির টেমপ্লেটের চেয়ে আমাদের ৪–৫ দিনের স্প্রিন্ট বেছে নেয়।',
     'srv.th_scope': 'ফিচার ও পরিধি',
-    'srv.th_pipoza': '✨ পিপোজা ডেভ',
+    'srv.th_pipoza': '✨ পিপোজা',
     'srv.th_templates': 'ডিআইওয়াই বিল্ডার্স (Wix / Shopify)',
     'srv.th_agencies': 'চিরাচরিত ওয়েব এজেন্সি',
     'srv.f_turnaround': 'ডেলিভারির সময়',
@@ -1295,7 +1295,7 @@ PIPOZA.TRANSLATIONS = {
     // About Page specific
     'about.kicker': 'স্টুডিওর মূল দর্শন',
     'about.title': 'গতি, কারিগরি ও নির্ভুলতার ওপর ভিত্তি করে গড়ে ওঠা একটি বিশেষায়িত ওয়েব স্টুডিও।',
-    'about.desc': 'আমরা ধীরগতির এজেন্সি ও দুর্বল টেমপ্লেট দূর করতে পিপোজা ডেভ প্রতিষ্ঠা করেছি। আমরা এমন ওয়েবসাইট তৈরি করি যা সত্যিকার রূপান্তর ঘটায়।',
+    'about.desc': 'আমরা ধীরগতির এজেন্সি ও দুর্বল টেমপ্লেট দূর করতে পিপোজা প্রতিষ্ঠা করেছি। আমরা এমন ওয়েবসাইট তৈরি করি যা সত্যিকার রূপান্তর ঘটায়।',
     'about.p1_title': '৪–৫ দিনের স্প্রিন্ট ফোকাস',
     'about.p1_desc': 'আমরা নিবিষ্টভাবে কাজ করি। দীর্ঘ বিলম্ব ও অপ্রয়োজনীয় মিটিং বাদ দিয়ে মাত্র ৪ থেকে ৫ কর্মদিবসে আপনার সাইট ডেলিভারি করি।',
     'about.p2_title': 'জিরো-টেমপ্লেট গ্যারান্টি',
@@ -1324,7 +1324,7 @@ PIPOZA.TRANSLATIONS = {
 
     // Founders Section
     'about.founders_kicker': 'স্টুডিও নেতৃত্ব',
-    'about.founders_title': 'PipoZa Dev-এর প্রতিষ্ঠাতাদের সাথে পরিচিত হন',
+    'about.founders_title': 'PipoZa-এর প্রতিষ্ঠাতাদের সাথে পরিচিত হন',
     'about.founders_sub': 'কোনো এজেন্সি মধ্যস্থতাকারী ছাড়া সরাসরি ইঞ্জিনিয়ারিং কারুশিল্প। আপনার ডিজিটাল প্ল্যাটফর্ম নির্মাতা নিবেদিত টিমের সাথে পরিচিত হন।',
     'about.piush_name': 'পীযূষ মণ্ডল',
     'about.piush_crown': '👑 চিফ আর্কিটেক্ট, প্রধান ডেভেলপার ও স্টুডিও মালিক',
@@ -1336,7 +1336,7 @@ PIPOZA.TRANSLATIONS = {
     'about.piush_role1': 'প্রধান ডেভেলপার',
     'about.piush_role2': 'মালিক',
     'about.piush_role3': 'সাপোর্ট',
-    'about.piush_bio': 'PipoZa Dev-এর প্রধান ডেভেলপার ও প্রতিষ্ঠাতা। প্রতিটি প্রজেক্ট স্প্রিন্টে এন্ড-টু-এন্ড আর্কিটেকচার, কাস্টম ফ্রন্ট-এন্ড ইঞ্জিনিয়ারিং, হাই স্পিড পারফরম্যান্স এবং সরাসরি ক্লায়েন্ট সাপোর্ট পরিচালনা করেন।',
+    'about.piush_bio': 'PipoZa-এর প্রধান ডেভেলপার ও প্রতিষ্ঠাতা। প্রতিটি প্রজেক্ট স্প্রিন্টে এন্ড-টু-এন্ড আর্কিটেকচার, কাস্টম ফ্রন্ট-এন্ড ইঞ্জিনিয়ারিং, হাই স্পিড পারফরম্যান্স এবং সরাসরি ক্লায়েন্ট সাপোর্ট পরিচালনা করেন।',
     'about.chat_piush': 'পীযূষের সাথে চ্যাট করুন →',
     'about.email_piush': 'সরাসরি ইমেল ↗',
     'about.arjo_name': 'আর্য মণ্ডল',
@@ -1347,7 +1347,7 @@ PIPOZA.TRANSLATIONS = {
     'about.arjo_m3': 'ক্লায়েন্ট কেয়ার',
     'about.arjo_role1': 'পার্টনার',
     'about.arjo_role2': 'মডারেটর',
-    'about.arjo_bio': 'PipoZa Dev-এর পার্টনার ও স্টুডিও মডারেটর। ক্লায়েন্ট যোগাযোগ সমন্বয় করেন, গুণমান পরীক্ষা করেন, প্রজেক্টের অগ্রগতি তদারকি করেন এবং প্রতিটি ডেলিভারিতে সম্পূর্ণ সন্তুষ্টি নিশ্চিত করেন।',
+    'about.arjo_bio': 'PipoZa-এর পার্টনার ও স্টুডিও মডারেটর। ক্লায়েন্ট যোগাযোগ সমন্বয় করেন, গুণমান পরীক্ষা করেন, প্রজেক্টের অগ্রগতি তদারকি করেন এবং প্রতিটি ডেলিভারিতে সম্পূর্ণ সন্তুষ্টি নিশ্চিত করেন।',
     'about.chat_arjo': 'আর্যর সাথে চ্যাট করুন →',
     'about.ig_studio': 'ইনস্টাগ্রাম স্টুডিও ↗',
 
@@ -1454,7 +1454,7 @@ PIPOZA.TRANSLATIONS = {
     'field.msg_sender': 'আপনার নাম / ব্যবসার নাম *',
     'field.msg_sender_ph': 'যেমন: রাহুল শর্মা (জেনিস লজিস্টিকস)',
     'field.msg_body': 'আপনি কেমন ওয়েবসাইট বানাতে চান? *',
-    'field.msg_body_ph': 'নমস্কার পিপোজা ডেভ, আমি আমাদের নতুন স্টার্টআপের জন্য একটি আধুনিক ওয়েবসাইট বানাতে চাই। ৪-৫ দিনের স্প্রিন্টের খরচ ও সময় জানাবেন?',
+    'field.msg_body_ph': 'নমস্কার PipoZa, আমি আমাদের নতুন স্টার্টআপের জন্য একটি আধুনিক ওয়েবসাইট বানাতে চাই। ৪-৫ দিনের স্প্রিন্টের খরচ ও সময় জানাবেন?',
 
     // Color Studio
     'studio.presets_title': 'প্রিসেট কালার প্যালেট',
@@ -1480,8 +1480,8 @@ PIPOZA.TRANSLATIONS = {
     'foot.email_link': 'ইমেইল: pipoza.dev@gmail.com',
     'foot.wa_link': 'হোয়াটসঅ্যাপ: +91 78108 88147',
     'foot.ig_link': 'ইনস্টাগ্রাম: @pipozadev.studio',
-    'foot.copy': '© 2026 PipoZa Dev. সর্বস্বত্ব সংরক্ষিত।',
-    'foot.made': 'পিপোজা ডেভ দ্বারা নির্মিত'
+    'foot.copy': '© 2026 PipoZa. সর্বস্বত্ব সংরক্ষিত।',
+    'foot.made': 'পিপোজা দ্বারা নির্মিত'
   }
 };
 
